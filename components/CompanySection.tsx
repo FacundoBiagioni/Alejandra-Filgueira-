@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { CommonProps } from "@/types";
 
-export default function CompanySection() {
+export default function CompanySection({ className }: CommonProps) {
     return (
-        <div className="py-4 bg-zinc-100">
+        <div className={`py-4 bg-zinc-100 ${className || ""}`}>
             <p className="py-4 text-lg font-medium text-center opacity-40">Trusted by the world’s best companies</p>
             <div className="container flex flex-wrap items-center justify-between">
 

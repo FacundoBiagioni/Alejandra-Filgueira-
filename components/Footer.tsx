@@ -1,36 +1,66 @@
 import Link from "next/link";
+import { NavLink, SocialLink, ContactInfo } from "@/types";
 
+const companyLinks: NavLink[] = [
+    { href: '/about', label: 'About Us' },
+    { href: '/press', label: 'Press' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/contact', label: 'Contact' },
+];
+
+const developmentLinks: NavLink[] = [
+    { href: '/documentation', label: 'Documentation' },
+    { href: '/api', label: 'API Reference' },
+    { href: '/changelog', label: 'Changelog' },
+    { href: '/status', label: 'Status' },
+];
+
+const socialLinks: SocialLink[] = [
+    { platform: 'instagram', url: 'https://instagram.com', icon: 'instagram-icon' },
+    { platform: 'linkedin', url: 'https://linkedin.com', icon: 'linkedin-icon' },
+    { platform: 'twitter', url: 'https://twitter.com', icon: 'twitter-icon' },
+];
+
+const contactInfo: ContactInfo = {
+    address: '123 Design Street, City, Country',
+    phone: '+1 234 567 890',
+    email: 'contact@digimax.com',
+    socialLinks: socialLinks
+};
 
 export default function Footer() {
-
     return (
         <div className="bg-zinc-100">
             <div className="container lg:grid lg:grid-cols-2 py-14">
                 <div className="grid gap-4 pb-4 text-left lg:pb-0 lg:grid-cols-3">
                     <div>
                         <h2 className="pb-4 text-xl font-semibold">COMPANY</h2>
-                        <div className="flex flex-col ">
-                            <Link className="py-1 hover:underline" href="/about">About Us</Link>
-                            <Link className="py-1 hover:underline" href="/press">Press</Link>
-                            <Link className="py-1 hover:underline" href="/careers">Careers</Link>
-                            <Link className="py-1 hover:underline" href="/contact">Contact</Link>
+                        <div className="flex flex-col">
+                            {companyLinks.map((link) => (
+                                <Link key={link.href} className="py-1 hover:underline" href={link.href}>
+                                    {link.label}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     <div>
                         <h2 className="pb-4 text-xl font-semibold">DEVELOPMENT</h2>
-                        <div className="flex flex-col ">
-                            <Link className="py-1 hover:underline" href="/about">Documentation</Link>
-                            <Link className="py-1 hover:underline" href="/press">API Reference</Link>
-                            <Link className="py-1 hover:underline" href="/careers">Changelog</Link>
-                            <Link className="py-1 hover:underline" href="/contact">Status</Link>
+                        <div className="flex flex-col">
+                            {developmentLinks.map((link) => (
+                                <Link key={link.href} className="py-1 hover:underline" href={link.href}>
+                                    {link.label}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     <div>
                         <h2 className="pb-4 text-xl font-semibold">CONNECT</h2>
-                        <div className="flex flex-col ">
-                            <Link className="py-1 hover:underline" href="/about">Instagram</Link>
-                            <Link className="py-1 hover:underline" href="/press">Linkedin</Link>
-                            <Link className="py-1 hover:underline" href="/careers">Twitter</Link>
+                        <div className="flex flex-col">
+                            {contactInfo.socialLinks.map((link) => (
+                                <Link key={link.platform} className="py-1 hover:underline" href={link.url}>
+                                    {link.platform.charAt(0).toUpperCase() + link.platform.slice(1)}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>
