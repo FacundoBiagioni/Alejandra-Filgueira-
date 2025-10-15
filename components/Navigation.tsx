@@ -3,12 +3,13 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
+import { NavLink } from "@/types";
 
-const nav = [
-    { href: '/', label: 'HOME' },
-    { href: '/projects', label: 'PROJECTS' },
-    { href: '/about', label: 'ABOUT US' },
-    { href: '/gallery', label: 'GALLERY' },
+const nav: NavLink[] = [
+    { href: '/', label: 'HOME', isActive: false },
+    { href: '/projects', label: 'PROJECTS', isActive: false },
+    { href: '/about', label: 'ABOUT US', isActive: false },
+    { href: '/gallery', label: 'GALLERY', isActive: false },
 
 ]
 
@@ -36,11 +37,13 @@ export default function Navigation() {
             </button>
 
             <nav className={`lg:flex gap-x-6 transform transition ${isOpen ? 'flex flex-col px-8 py-12 z-50  gap-y-6 absolute inset-y-0 bg-white right-0  translate-x-0 ' : 'hidden max-md:translate-x-full'}`}>
-                {nav.map(({ href, label }) => (
-                    <Link key={href} href={href} className={
-                        pathname === href ? 'text-black font-semibold' : ''
-                    }>
-                        {label}
+                {nav.map((link) => (
+                    <Link 
+                        key={link.href} 
+                        href={link.href} 
+                        className={pathname === link.href ? 'text-black font-semibold' : ''}
+                    >
+                        {link.label}
                     </Link>
                 ))}
             </nav>
