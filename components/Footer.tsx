@@ -2,10 +2,10 @@ import Link from "next/link";
 import { NavLink, SocialLink, ContactInfo } from "@/types";
 
 const companyLinks: NavLink[] = [
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'Sobre mí' },
     { href: '/press', label: 'Press' },
     { href: '/careers', label: 'Careers' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/contact', label: 'Contacto' },
 ];
 
 const developmentLinks: NavLink[] = [
@@ -65,13 +65,13 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="pt-4 text-center border-t-2 lg:pt-0 lg:text-left lg:border-0 lg:pl-20 ">
-                    <p className="pb-4 text-xl font-semibold">STAY UPDATED</p>
+                    <p className="pb-4 text-xl font-semibold">MANTENTE ACTUALIZADO</p>
                     <div className="relative lg:max-w-sm">
-                        <input className="w-full px-4 pr-20 border-2 border-gray-300 rounded-full h-14" type="text" placeholder="Email Address" />
-                        <button className="absolute h-10 px-3 text-sm text-white bg-black rounded-full top-2 right-2 hover:border-2 hover:border-black hover:bg-white hover:text-black">Subscribe</button>
+                        <input className="w-full px-4 pr-20 border-2 border-gray-300 rounded-full h-14" type="text" placeholder="Email" />
+                        <button className="absolute h-10 px-3 text-sm text-white bg-black rounded-full top-2 right-2 hover:border-2 hover:border-black hover:bg-white hover:text-black">suscribir</button>
                     </div>
                     <p className="pt-4 text-gray-500">
-                        By subscribing to our newsletter, you agree to receive emails from us. Your personal data will be stored and processed in accordance with our Privacy Policy and you can unsubscribe at any time.
+                        Al suscribirse a nuestro boletín informativo, acepta recibir nuestros correos electrónicos. Sus datos personales se almacenarán y procesarán de acuerdo con nuestra Política de Privacidad y podrá darse de baja en cualquier momento.
                     </p>
                 </div>
             </div>
@@ -80,11 +80,11 @@ export default function Footer() {
             <div className="py-10 bg-zinc-200">
                 <div className="container text-center text-gray-500 lg:justify-between lg:flex">
                     <div className="pb-4 lg:pb-0">
-                        <p>&copy;2023 DIGIMAX.All rights reserved </p>
+                        <p>&copy;2025 Alejandra Filgueira todos los derechos reservados </p>
                     </div>
                     <div className="">
-                        <Link className="p-4 hover:underline" href="/privacy">Privacy</Link>
-                        <Link className="p-4 hover:underline" href="/terms">Terms</Link>
+                        <Link className="p-4 hover:underline" href="/privacy">Privacidad</Link>
+                        <Link className="p-4 hover:underline" href="/terms">Terminos</Link>
                     </div>
                 </div>
             </div>

@@ -6,10 +6,10 @@ import { TbArrowUpRight } from "react-icons/tb";
 import { NavLink } from "@/types";
 
 const nav: NavLink[] = [
-    { href: '/', label: 'HOME', isActive: false },
-    { href: '/projects', label: 'PROJECTS', isActive: false },
-    { href: '/about', label: 'ABOUT US', isActive: false },
-    { href: '/gallery', label: 'GALLERY', isActive: false },
+    { href: '/', label: 'INICIO', isActive: false },
+    { href: '/projects', label: 'PROYECTOS', isActive: false },
+    { href: '/about', label: 'SOBRE MÍ', isActive: false },
+    { href: '/gallery', label: 'GALERIA', isActive: false },
 
 ]
 
@@ -51,7 +51,7 @@ export default function Navigation() {
 
             </div>
             <Link href="/contact" className="items-center hidden px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow lg:inline-flex hover:bg-gray-100">
-                Contact Us <TbArrowUpRight className="w-5 h-5 ml-2" />
+                Contáctame <TbArrowUpRight className="w-5 h-5 ml-2" />
             </Link>
         </>
     )
