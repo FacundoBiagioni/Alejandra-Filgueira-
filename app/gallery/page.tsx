@@ -28,25 +28,22 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="container py-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-      {[0, 1, 2, 3].map((columnIndex) => (
-        <div key={columnIndex} className="flex flex-col gap-4">
-          {images
-            .slice(columnIndex * 3, (columnIndex + 1) * 3)
-            .map((image, index) => (
-              <div key={index}>
-                <Image
-                  className="h-auto max-w-full rounded-lg"
-                  src={image.src}
-                  alt={image.alt}
-                  width={500}
-                  height={300}
-                />
-              </div>
-            ))}
-        </div>
-      ))}
+    <div className="container py-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {images.map((image, index) => (
+          <div key={index}>
+            <Image
+              className="h-auto max-w-full rounded-lg"
+              src={image.src}
+              alt={image.alt}
+              width={500}
+              height={300}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
+
 }
 
