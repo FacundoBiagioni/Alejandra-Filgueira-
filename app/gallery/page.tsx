@@ -3,6 +3,17 @@ import Image from "next/image";
 
 export default function Gallery() {
   const images: GalleryImage[] = [
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },
+    { src: "/image/badroom.jpg", alt: "Bedroom interior" },  
     { src: "/image/badroom.jpg", alt: "Bedroom interior" },
     { src: "/image/gallery2.jpg", alt: "Modern living room" },
     { src: "/image/gallery.jpg", alt: "Minimalist gallery space" },
