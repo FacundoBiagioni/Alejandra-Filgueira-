@@ -8,7 +8,7 @@ export default function Projects() {
       name: "Drowing room for family time ",
       description:
         "Badroom with a clean and comfortable design for your family. charming whit a modern design. ",
-      image: "/image/project3.jpg",
+      image: "/image/ceramica/ceramica15.jpeg",
       link: "",
     },
     {
@@ -16,7 +16,7 @@ export default function Projects() {
       name: "Kitchen look modern and clean",
       description:
         "kitchen look modern and clean. charming whit a modern design. ",
-      image: "/image/project2.jpg",
+      image: "/image/artes para empresas/empresa29.jpeg",
       link: "",
     },
     {
@@ -25,6 +25,14 @@ export default function Projects() {
       description:
         "Drowing room with a clean and comfortable design for your family. charming whit a modern design. ",
       image: "/image/project4.png",
+    },
+        {
+      id: 4,
+      name: "Kitchen look modern and clean",
+      description:
+        "kitchen look modern and clean. charming whit a modern design. ",
+      image: "/image/project2.jpg",
+      link: "",
     },
   ];
   return (
@@ -43,8 +51,8 @@ export default function Projects() {
             <div>
               <Image
                 src={project.image}
-                width={480}
-                height={380}
+                width={680}
+                height={480}
                 alt=""
                 className="w-full"
               />
