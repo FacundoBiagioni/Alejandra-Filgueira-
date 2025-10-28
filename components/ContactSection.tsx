@@ -9,7 +9,7 @@ export default function ContactSection({ className }: CommonProps) {
         
         {/* Texto principal */}
         <div className="text-center">
-          <p className="text-2xl text-gray-800">Tu próximo paso</p>
+          <p className="text-2xl text-gray-800">Tu próximo paso,</p>
           <h1 className="text-3xl font-medium lg:text-6xl text-gray-900">
             Un mensaje
           </h1>
