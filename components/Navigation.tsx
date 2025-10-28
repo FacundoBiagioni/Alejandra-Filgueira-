@@ -7,8 +7,8 @@ import { NavLink } from "@/types";
 
 const nav: NavLink[] = [
     { href: '/', label: 'INICIO', isActive: false },
-    { href: '/projects', label: 'PROYECTOS', isActive: false },
     { href: '/about', label: 'SOBRE MÍ', isActive: false },
+    { href: '/projects', label: 'PROYECTOS', isActive: false },
     { href: '/ambient', label: 'AMBIENTACIONES', isActive: false },
     { href: '/gallery', label: 'GALERIA', isActive: false },
 
