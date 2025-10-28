@@ -100,7 +100,7 @@ export default function Gallery() {
     { src: "/image/cuadros/cuadro97.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro98.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro99.jpeg", alt: "cuadro" },
-    { src: "/image/cuadros/cuadro100.jpeg", alt: "cuadro" },
+    { src: "/image/cuadros/cuadro100.webp", alt: "cuadro" },
   ];
   
   return (
@@ -123,3 +123,4 @@ export default function Gallery() {
 
 }
 
+//tengo que sacar un cuadro para que sea simetrico, cuando ordene veo cual
