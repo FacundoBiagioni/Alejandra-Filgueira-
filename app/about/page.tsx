@@ -1,6 +1,8 @@
 "use client";
 
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -192,6 +194,43 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* SECCIÓN INVITACIÓN A GALERÍA (ABOUT) */}
+<section className="container mx-auto px-20 py-20 border-t border-gray-200 text-center">
+  <h3 className="text-2xl font-semibold mb-6">
+    Explorá su universo pictórico
+  </h3>
+  <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+    Cada obra de Alejandra Silveira es una invitación a detenerse, observar
+    y dejarse llevar por el color, la materia y la emoción.  
+    Entrá a la galería y descubrí las pinturas originales que dieron vida a cada proyecto.
+  </p>
+
+  {/* BOTÓN EN FORMA DE CUADRO */}
+  <Link
+    href="/gallery"
+    className="group relative inline-block rounded-xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500"
+  >
+    {/* Imagen del cuadro */}
+    <Image
+      src="/image/cuadros/cuadro24.jpg" // ⚠️ reemplazá por una de tus obras destacadas
+      alt="Ver galería de obras"
+      width={400}
+      height={300}
+      className="object-cover object-center rounded-xl"
+    />
+
+    {/* Capa de efecto al pasar el mouse */}
+    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
+      <span className="text-white text-lg font-medium tracking-wide">
+        Ver galería de obras
+      </span>
+    </div>
+
+    {/* Marco decorativo (simula un cuadro enmarcado) */}
+    <div className="absolute inset-0 border-[10px] border-white rounded-xl pointer-events-none" />
+  </Link>
+</section>
+
     </div>
   );
 }

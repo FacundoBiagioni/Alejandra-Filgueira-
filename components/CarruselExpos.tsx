@@ -15,10 +15,10 @@ export default function CarruselExpos() {
                 </div>
                 <div>
                     <h2 className="pb-6 text-xl font-bold tracking-wider">Algunas de las exposiciones más importantes de mi trayectoria</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 text-gray-500 gap-x-6 gap-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 pb-4 text-gray-500 gap-x-6 gap-y-4">
                         <div>
                             <p>
-                                A lo largo de mi carrera, he participado en múltiples exposiciones individuales y colectivas, tanto en Argentina como en el exterior. Cada obra refleja mi exploración de técnicas abstractas y experimentación con materiales.
+                                A lo largo de mi carrera, he participado en múltiples exposiciones individuales y colectivas, tanto en Argentina como en el exterior. Cada obra refleja mi exploración de técnicas abstractas y experimentación.
                             </p>
                         </div>
                         <div>
@@ -31,6 +31,7 @@ export default function CarruselExpos() {
             </div>
 
             {/* Swiper de imágenes */}
+            <div className="-px-16">
             <Swiper
                 slidesPerView={1}
                 loop={true}
@@ -242,6 +243,7 @@ export default function CarruselExpos() {
                     />
                 </SwiperSlide>
             </Swiper>
+            </div>
         </div>
     )
 }
