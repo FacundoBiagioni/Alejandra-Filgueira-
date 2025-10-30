@@ -1,6 +1,6 @@
 "use client";
 
-
+import InstagramGrid from "@/components/InstagramGrid";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -87,6 +87,11 @@ export default function About() {
         </p>
       </section>
 
+      {/* INSTAGRAM GRID */}
+      <div>
+      <InstagramGrid/>
+      </div>
+
       {/* FORMACIÓN */}
       <section className="container py-16 border-t border-gray-200">
         <h2 className="text-3xl font-semibold mb-8">Formación Artística</h2>
@@ -133,36 +138,36 @@ export default function About() {
       </section>
 
     {/* COLABORACIONES / MARCAS */}
-    <section className="container py-16 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-8">Colaboraciones y Participaciones</h2>
-            <p className="max-w-4xl mb-8 text-gray-700">
-                A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
-                fundaciones y marcas de gran reconocimiento, como la Fundación Avon
-                Argentina, Century 21 y el Hotel Hilton de Puerto Madero. Su trabajo
-                ha estado presente en exposiciones vinculadas a causas sociales,
-                empresariales y culturales, donde el arte se convierte en un puente de comunicación.
-            </p>
+    <section className="container mx-auto px-20 py-16 border-t border-gray-200">
+      {/* Título */}
+      <h2 className="text-3xl font-semibold -mb-16">
+        Colaboraciones y Participaciones
+      </h2>
 
-    {/* Contenedor con dos imágenes juntas */}
-    <div className="w-full h-[400px] flex gap-2 rounded-lg overflow-hidden">
-        <div className="relative w-1/2 h-full">
-            <Image
-                src="/image/artes para empresas/empresa2.jpg"
-                alt="Exposición con Century 21 - parte 1"
-                fill
-                className="object-cover"
-            />
+      {/* Contenido principal */}
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+        {/* Texto */}
+        <p className="text-gray-700 leading-relaxed lg:w-3/4">
+          A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
+          fundaciones y marcas de gran reconocimiento, como la Fundación Avon
+          Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
+          Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
+          empresariales y culturales, donde el arte se convierte en un puente de comunicación.
+        </p>
+
+        {/* Imagen */}
+        <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
+          <Image
+            src="/image/artes para empresas/empresa5.jpg"
+            alt="Alejandra Filgueira en su taller"
+            width={400}
+            height={400}
+            className="rounded-lg object-cover w-full h-[300px] shadow-md"
+          />
         </div>
-        <div className="relative w-1/2 h-full">
-            <Image
-                src="/image/artes para empresas/empresa25.jpeg" // segunda imagen
-                alt="Exposición con Century 21 - parte 2"
-                fill
-                className="object-cover"
-            />
-        </div>
-    </div>
+      </div>
     </section>
+
 
 
       {/* TALLER / PROCESO */}
@@ -208,7 +213,7 @@ export default function About() {
   {/* BOTÓN EN FORMA DE CUADRO */}
   <Link
     href="/gallery"
-    className="group relative inline-block rounded-xl overflow-hidden shadow-xl hover:scale-105 transform transition duration-500"
+    className="group relative inline-block rounded-xl overflow-hidden shadow-xl border hover:scale-105 transform transition duration-500"
   >
     {/* Imagen del cuadro */}
     <Image
