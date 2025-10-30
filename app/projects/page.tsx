@@ -149,7 +149,7 @@ export default function Empresas() {
         <h3 className="text-3xl font-semibold mb-4">
           Colaboración destacada  <span className="text-4xl">- Century 21 </span> 
         </h3>
-        <p className="text-gray-700 leading-relaxed mt-10">
+        <p className="text-gray-700 leading-relaxed mt-9">
           En 2023, Alejandra fue convocada por la firma{" "}
           <span className="font-medium">Century 21</span> para desarrollar piezas
           exclusivas destinadas a sus espacios corporativos y vitrinas.  
