@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { TbArrowUpRight } from "react-icons/tb";
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,9 +25,6 @@ export default function CarruselExpos() {
                             <p>
                                 Mi trabajo ha sido presentado en museos, galerías y ferias de arte, donde busco transmitir emociones y conectar con el espectador a través de texturas, colores y composición.
                             </p>
-                            <a href="/projects" className="inline-flex items-center pt-4 text-lg font-bold text-black underline">
-                                Ver más proyectos <TbArrowUpRight />
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -96,15 +92,6 @@ export default function CarruselExpos() {
                     <Image
                         src="/image/exposiciones/expo6.jpeg"
                         alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full max-h-[500px] object-fill rounded-md"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo13.jpeg"
-                        alt="Exposición FusiónARTE City Bell"
                         width={520}
                         height={700}
                         className="w-full max-h-[500px] object-fill rounded-md"
