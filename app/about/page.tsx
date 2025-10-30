@@ -32,22 +32,22 @@ export default function About() {
         </section>
 
 
-      {/* BIO */}
-      <section className="container py-20 space-y-10">
-        <div className="lg:flex items-start gap-12">
-          {/* Imagen lateral */}
-<div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
-  <Image
-    src="/image/exposiciones/expo28.jpeg"
-    alt="Retrato de Alejandra Filgueira"
-    width={500}
-    height={700}
-    className="w-full h-full object-cover object-[70%_40%]"
-  />
-  <p className="text-sm text-gray-400 mt-2 text-center">
-    Alejandra Filgueira — Artista plástica y diseñadora visual
-  </p>
-</div>
+        {/* BIO */}
+        <section className="container py-20 space-y-10">
+          <div className="lg:flex items-start gap-12">
+            {/* Imagen lateral */}
+          <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
+          <Image
+            src="/image/procesos/proceso21.jpeg"
+            alt="Retrato de Alejandra Filgueira"
+            width={500}
+            height={700}
+            className="w-full h-full object-cover object-[70%_40%]"
+          />
+          <p className="text-sm text-gray-400 mt-2 text-center">
+            Alejandra Filgueira — Artista plástica y diseñadora visual
+          </p>
+        </div>
 
 
           {/* Texto BIO */}
@@ -183,7 +183,7 @@ export default function About() {
           </div>
           <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
             <Image
-              src="/image/procesos/proceso6.jpg"
+              src="/image/procesos/proceso12.jpeg"
               alt="Alejandra Filgueira en su taller"
               width={700}
               height={500}
