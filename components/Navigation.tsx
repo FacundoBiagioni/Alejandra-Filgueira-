@@ -6,8 +6,8 @@ import { TbArrowUpRight } from "react-icons/tb";
 import { NavLink } from "@/types";
 
 const nav: NavLink[] = [
-    { href: '/', label: 'INICIO', isActive: false },
-    { href: '/projects', label: 'PROYECTOS', isActive: false },
+    { href: '/', label: 'BIOGRAFÍA', isActive: false },
+    { href: '/projects', label: 'COLABORACIONES', isActive: false },
     { href: '/ambient', label: 'AMBIENTACIONES', isActive: false },
     { href: '/gallery', label: 'GALERIA', isActive: false },
 

@@ -3,6 +3,7 @@
 import InstagramGrid from "@/components/InstagramGrid";
 import Image from "next/image";
 import Link from "next/link";
+import { TbArrowUpRight } from "react-icons/tb";
 
 export default function About() {
   return (
@@ -25,54 +26,54 @@ export default function About() {
             <Image
                 src="/logo.png"
                 alt="Logo Alejandra Filgueira"
-                width={480} // ← Tamaño aumentado del logo
+                width={480}
                 height={480}
-                className="object-contain" // Más sombra y leve oscuridad al logo
+                className="object-contain"
                 priority
             />
         </div>
         </section>
 
 
-        {/* BIO */}
-        <section className="container py-20 space-y-10">
-          <div className="lg:flex items-start gap-12">
-            {/* Imagen lateral */}
-          <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
-          <Image
-            src="/image/procesos/proceso21.jpeg"
-            alt="Retrato de Alejandra Filgueira"
-            width={500}
-            height={700}
-            className="w-full h-full object-cover object-[70%_40%]"
-          />
-          <p className="text-sm text-gray-400 mt-2 text-center">
-            Alejandra Filgueira — Artista plástica y diseñadora visual
-          </p>
-        </div>
+{/* BIO */}
+<section className="container py-20 border-t border-gray-200">
+  <div className="lg:flex items-center gap-12">
+    {/* Imagen lateral izquierda */}
+    <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
+      <Image
+        src="/image/procesos/proceso21.jpeg"
+        alt="Retrato de Alejandra Filgueira"
+        width={500}
+        height={700}
+        className="w-full h-full object-cover object-[70%_40%] rounded-lg shadow-md"
+      />
+      <p className="text-sm text-gray-400 mt-2 text-center">
+        Alejandra Filgueira — Artista plástica y diseñadora visual
+      </p>
+    </div>
 
+    {/* Texto a la derecha */}
+    <div className="lg:w-2/3 space-y-6 text-gray-700">
+      <h2 className="text-3xl font-semibold mb-6">Sobre mí</h2>
+      <p>
+        Nacida en La Plata, Argentina, Alejandra Filgueira es una artista
+        plástica especializada en arte abstracto. Se graduó en 1989 como
+        Diseñadora en Comunicación Visual en la Facultad de Bellas Artes
+        de la Universidad Nacional de La Plata. Realizó estudios
+        secundarios en Gießen, Alemania, donde comenzó su vínculo con el
+        arte. Desde 1998 continúa su formación en pintura, dibujo y
+        grabado junto a reconocidos artistas y docentes universitarios.
+      </p>
+      <p>
+        Su trabajo explora la relación entre color, textura y emoción, en
+        un proceso donde la materia se convierte en lenguaje. A través del
+        expresionismo abstracto, busca generar diálogo con el espectador,
+        invitándolo a interpretar libremente la obra.
+      </p>
+    </div>
+  </div>
+</section>
 
-          {/* Texto BIO */}
-          <div className="lg:w-2/3 space-y-6">
-            <h2 className="text-3xl font-semibold">Sobre mí</h2>
-            <p>
-              Nacida en La Plata, Argentina, Alejandra Filgueira es una artista
-              plástica especializada en arte abstracto. Se graduó en 1989 como
-              Diseñadora en Comunicación Visual en la Facultad de Bellas Artes
-              de la Universidad Nacional de La Plata. Realizó estudios
-              secundarios en Gießen, Alemania, donde comenzó su vínculo con el
-              arte. Desde 1998 continúa su formación en pintura, dibujo y
-              grabado junto a reconocidos artistas y docentes universitarios.
-            </p>
-            <p>
-              Su trabajo explora la relación entre color, textura y emoción, en
-              un proceso donde la materia se convierte en lenguaje. A través del
-              expresionismo abstracto, busca generar diálogo con el espectador,
-              invitándolo a interpretar libremente la obra.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* STATEMENT */}
       <section className="container py-16 border-t border-gray-200">
@@ -137,68 +138,86 @@ export default function About() {
         </div>
       </section>
 
-    {/* COLABORACIONES / MARCAS */}
-    <section className="container mx-auto px-20 py-16 border-t border-gray-200">
-      {/* Título */}
-      <h2 className="text-3xl font-semibold -mb-16">
+{/* COLABORACIONES / MARCAS */}
+<section className="container mx-auto px-20 py-16 border-t border-gray-200">
+  {/* Contenido principal */}
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+    {/* Bloque completo (título + texto + botón) levemente más arriba */}
+    <div className="lg:w-3/4 -translate-y-2">
+      <h2 className="text-3xl font-semibold mb-6">
         Colaboraciones y Participaciones
       </h2>
 
-      {/* Contenido principal */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
-        {/* Texto */}
-        <p className="text-gray-700 leading-relaxed lg:w-3/4">
-          A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
-          fundaciones y marcas de gran reconocimiento, como la Fundación Avon
-          Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
-          Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
-          empresariales y culturales, donde el arte se convierte en un puente de comunicación.
-        </p>
+      <p className="text-gray-700 leading-relaxed mb-6">
+        A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
+        fundaciones y marcas de gran reconocimiento, como la Fundación Avon
+        Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
+        Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
+        empresariales y culturales, donde el arte se convierte en un puente de comunicación.
+      </p>
 
-        {/* Imagen */}
-        <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
-          <Image
-            src="/image/artes para empresas/empresa5.jpg"
-            alt="Alejandra Filgueira en su taller"
-            width={400}
-            height={400}
-            className="rounded-lg object-cover w-full h-[300px] shadow-md"
-          />
-        </div>
-      </div>
-    </section>
+      <Link
+        href="/projects"
+        className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+      >
+        Ver proyectos completos
+        <TbArrowUpRight className="w-5 h-5" />
+      </Link>
+    </div>
+
+    {/* Imagen */}
+    <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/image/artes para empresas/empresa5.jpg"
+        alt="Alejandra Filgueira en su taller"
+        width={400}
+        height={400}
+        className="rounded-lg object-cover w-full h-[300px] shadow-md"
+      />
+    </div>
+  </div>
+</section>
 
 
 
-      {/* TALLER / PROCESO */}
-      <section className="container py-16 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
-        <div className="lg:flex items-center gap-12">
-          <div className="lg:w-1/2 space-y-4 text-gray-700">
-            <p>
-              En su taller ubicado en City Bell, Alejandra trabaja rodeada de materiales
-              diversos, papeles, telas y pigmentos. Su proceso comienza con la
-              observación del entorno y continúa con la experimentación constante.
-              Cada obra surge del diálogo entre la intuición y la técnica, donde la
-              materia cobra vida propia.
-            </p>
-            <p>
-              A partir del reciclado y la reutilización, transforma objetos y soportes
-              en obras cargadas de energía visual. Las transparencias, superposiciones
-              y relieves son una constante en su búsqueda estética.
-            </p>
-          </div>
-          <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
-            <Image
-              src="/image/procesos/proceso12.jpeg"
-              alt="Alejandra Filgueira en su taller"
-              width={700}
-              height={500}
-              className="rounded-lg object-cover w-full h-auto shadow-md"
-            />
-          </div>
-        </div>
-      </section>
+
+
+
+
+{/* TALLER / PROCESO */}
+<section className="container py-16 border-t border-gray-200">
+  <div className="lg:flex items-center gap-12">
+    {/* Imagen a la izquierda */}
+    <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
+      <Image
+        src="/image/procesos/proceso12.jpeg"
+        alt="Alejandra Filgueira en su taller"
+        width={700}
+        height={500}
+        className="rounded-lg object-cover w-full h-auto shadow-md"
+      />
+    </div>
+
+    {/* Texto a la derecha */}
+    <div className="lg:w-1/2 space-y-4 text-gray-700">
+      <h2 className="text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
+      <p>
+        En su taller ubicado en City Bell, Alejandra trabaja rodeada de materiales
+        diversos, papeles, telas y pigmentos. Su proceso comienza con la
+        observación del entorno y continúa con la experimentación constante.
+        Cada obra surge del diálogo entre la intuición y la técnica, donde la
+        materia cobra vida propia.
+      </p>
+      <p>
+        A partir del reciclado y la reutilización, transforma objetos y soportes
+        en obras cargadas de energía visual. Las transparencias, superposiciones
+        y relieves son una constante en su búsqueda estética.
+      </p>
+    </div>
+  </div>
+</section>
+
+      
       {/* SECCIÓN INVITACIÓN A GALERÍA (ABOUT) */}
 <section className="container mx-auto px-20 py-20 border-t border-gray-200 text-center">
   <h3 className="text-2xl font-semibold mb-6">
