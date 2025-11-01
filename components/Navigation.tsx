@@ -10,7 +10,7 @@ const nav: NavLink[] = [
     { href: '/projects', label: 'COLABORACIONES', isActive: false },
     { href: '/ambient', label: 'AMBIENTACIONES', isActive: false },
     { href: '/gallery', label: 'GALERIA', isActive: false },
-
+    { href: '/ceramic', label: 'CERÁMICA', isActive: false },
 ]
 
 export default function Navigation() {
