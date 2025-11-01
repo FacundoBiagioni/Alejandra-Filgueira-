@@ -7,7 +7,7 @@ const InstagramGrid = () => {
   const [iframeHeight] = useState(100);
 
   return (
-    <section className="container mx-auto px-16 py-16 border-t border-gray-200">
+    <section className="container mx-auto px-20 py-16 border-t border-gray-200">
       <h3 className="text-3xl font-semibold mb-3">
         Conocé más sobre mi mundo artístico
       </h3>
