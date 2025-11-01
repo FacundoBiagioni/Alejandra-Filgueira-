@@ -138,84 +138,130 @@ export default function About() {
         </div>
       </section>
 
-{/* COLABORACIONES / MARCAS */}
-<section className="container mx-auto px-20 py-16 border-t border-gray-200">
-  {/* Contenido principal */}
-  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
-    {/* Bloque completo (título + texto + botón) levemente más arriba */}
-    <div className="lg:w-3/4 -translate-y-2">
-      <h2 className="text-3xl font-semibold mb-6">
-        Colaboraciones y Participaciones
-      </h2>
+      {/* COLABORACIONES / MARCAS */}
+      <section className="container mx-auto px-20 py-16 border-t border-gray-200">
+        {/* Contenido principal */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+          {/* Bloque completo (título + texto + botón) levemente más arriba */}
+          <div className="lg:w-3/4 -translate-y-2">
+            <h2 className="text-3xl font-semibold mb-6">
+              Colaboraciones y Participaciones
+            </h2>
 
-      <p className="text-gray-700 leading-relaxed mb-6">
-        A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
-        fundaciones y marcas de gran reconocimiento, como la Fundación Avon
-        Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
-        Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
-        empresariales y culturales, donde el arte se convierte en un puente de comunicación.
-      </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
+              fundaciones y marcas de gran reconocimiento, como la Fundación Avon
+              Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
+              Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
+              empresariales y culturales, donde el arte se convierte en un puente de comunicación.
+            </p>
 
-      <Link
-        href="/projects"
-        className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
-      >
-        Ver proyectos completos
-        <TbArrowUpRight className="w-5 h-5" />
-      </Link>
-    </div>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+            >
+              Ver proyectos completos
+              <TbArrowUpRight className="w-5 h-5" />
+            </Link>
+          </div>
 
-    {/* Imagen */}
-    <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
-      <Image
-        src="/image/artes para empresas/empresa5.jpg"
-        alt="Alejandra Filgueira en su taller"
-        width={400}
-        height={400}
-        className="rounded-lg object-cover w-full h-[300px] shadow-md"
-      />
-    </div>
-  </div>
-</section>
+          {/* Imagen */}
+          <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
+            <Image
+              src="/image/artes para empresas/empresa5.jpg"
+              alt="Alejandra Filgueira en su taller"
+              width={400}
+              height={400}
+              className="rounded-lg object-cover w-full h-[300px] shadow-md"
+            />
+          </div>
+        </div>
+      </section>
 
+      {/* TALLER / PROCESO */}
+      <section className="container py-16 border-t border-gray-200">
+        <div className="lg:flex items-center gap-12">
+          {/* Imagen a la izquierda */}
+          <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
+            <Image
+              src="/image/procesos/proceso12.jpeg"
+              alt="Alejandra Filgueira en su taller"
+              width={700}
+              height={500}
+              className="rounded-lg object-cover w-full h-auto shadow-md"
+            />
+          </div>
 
+          {/* Texto a la derecha */}
+          <div className="lg:w-1/2 space-y-4 text-gray-700">
+            <h2 className="text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
+            <p>
+              En su taller ubicado en City Bell, Alejandra trabaja rodeada de materiales
+              diversos, papeles, telas y pigmentos. Su proceso comienza con la
+              observación del entorno y continúa con la experimentación constante.
+              Cada obra surge del diálogo entre la intuición y la técnica, donde la
+              materia cobra vida propia.
+            </p>
+            <p>
+              A partir del reciclado y la reutilización, transforma objetos y soportes
+              en obras cargadas de energía visual. Las transparencias, superposiciones
+              y relieves son una constante en su búsqueda estética.
+            </p>
+          </div>
+        </div>
+      </section>
 
-
-
-
-
-{/* TALLER / PROCESO */}
 <section className="container py-16 border-t border-gray-200">
   <div className="lg:flex items-center gap-12">
-    {/* Imagen a la izquierda */}
-    <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
-      <Image
-        src="/image/procesos/proceso12.jpeg"
-        alt="Alejandra Filgueira en su taller"
-        width={700}
-        height={500}
-        className="rounded-lg object-cover w-full h-auto shadow-md"
-      />
+    {/* Texto a la izquierda */}
+    <div className="lg:w-1/3 mb-8 lg:mb-0 space-y-4 text-gray-700 text-left">
+      <h2 className="text-3xl font-semibold mb-4">Cerámica y Creatividad</h2>
+      <p>
+        Además de la pintura y el arte abstracto, Alejandra explora el mundo
+        de la cerámica, creando piezas únicas y llenas de detalle. Sus tazas,
+        platos y cuadros con elementos cerámicos combinan funcionalidad y
+        expresión artística, mostrando otra faceta de su creatividad.
+      </p>
+      <p>
+        A través del proceso, cada pieza refleja dedicación, paciencia y amor
+        por el material, convirtiendo la cerámica en un lenguaje propio.
+      </p>
     </div>
 
-    {/* Texto a la derecha */}
-    <div className="lg:w-1/2 space-y-4 text-gray-700">
-      <h2 className="text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
-      <p>
-        En su taller ubicado en City Bell, Alejandra trabaja rodeada de materiales
-        diversos, papeles, telas y pigmentos. Su proceso comienza con la
-        observación del entorno y continúa con la experimentación constante.
-        Cada obra surge del diálogo entre la intuición y la técnica, donde la
-        materia cobra vida propia.
-      </p>
-      <p>
-        A partir del reciclado y la reutilización, transforma objetos y soportes
-        en obras cargadas de energía visual. Las transparencias, superposiciones
-        y relieves son una constante en su búsqueda estética.
-      </p>
+    {/* Grid de imágenes a la derecha */}
+    <div className="lg:w-2/3 grid grid-cols-2 gap-4">
+      <Image
+        src="/image/ceramica/ceramica15.jpeg"
+        alt="Proceso de cerámica"
+        width={600}
+        height={400}
+        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+      />
+      <Image
+        src="/image/ceramica/ceramica2.jpg"
+        alt="Producto de cerámica terminado"
+        width={600}
+        height={400}
+        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+      />
+      <Image
+        src="/image/ceramica/ceramica40.jpeg"
+        alt="Proceso de cerámica"
+        width={600}
+        height={400}
+        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+      />
+      <Image
+        src="/image/ceramica/ceramica39.jpeg"
+        alt="Producto de cerámica terminado"
+        width={600}
+        height={400}
+        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+      />
     </div>
   </div>
 </section>
+
 
       
       {/* SECCIÓN INVITACIÓN A GALERÍA (ABOUT) */}
