@@ -1,35 +1,44 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 const InstagramGrid = () => {
-  useEffect(() => {
-    // Esto carga el script de LightWidget una sola vez
-    const script = document.createElement("script");
-    script.src = "https://cdn.lightwidget.com/widgets/lightwidget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [iframeHeight] = useState(100);
 
   return (
-    <section className="container mx-auto px-16 py-16 border-t text-center border-gray-200">
-      {/* Acá va el código del iframe de LightWidget */}
-      <div className="w-full flex justify-center">
-        <iframe src="//lightwidget.com/widgets/e8db2030e5e05267ba33c69bbbde11f6.html" scrolling="no" allowTransparency={true} className="lightwidget-widget" style={{width: '100%', border: 0, overflow: 'hidden'}}></iframe>
-      </div>
-      {/* Título de la sección */}
-      <p className="my-2 max-w-2xl text-sm italic text-gray-500 mx-auto ">
-        Descubrí las últimas publicaciones y obras directamente desde su perfil.
+    <section className="container mx-auto px-16 py-16 border-t border-gray-200">
+      <h3 className="text-3xl font-semibold mb-3">
+        Conocé más sobre mi mundo artístico
+      </h3>
+      <p className="lg:w-2/3 mb-10">
+          En este espacio comparto mi recorrido profesional y personal, 
+          los procesos detrás de cada obra y momentos que inspiran mi arte. 
+          Podés descubrir más y conectar conmigo a través de Instagram.
       </p>
 
+      <div className="w-full flex justify-center">
+        <iframe
+          ref={iframeRef}
+          src="https://widgets.commoninja.com/iframe/d1b3418c-3471-4efc-a5ab-ee7ea96310d6"
+          width="100%"
+          height={iframeHeight}
+          frameBorder={0}
+          scrolling="no"
+          style={{
+            maxWidth: "1400px",
+            minHeight: "420px",
+            borderRadius: "12px",
+            overflow: "hidden",
+          }}
+        ></iframe>
+      </div>
+
+      <p className="my-4 max-w-2xl text-sm italic text-gray-500 mx-auto text-center">
+        Descubrí las últimas publicaciones y obras directamente desde su perfil.
+      </p>
     </section>
   );
 };
 
 export default InstagramGrid;
-
-
