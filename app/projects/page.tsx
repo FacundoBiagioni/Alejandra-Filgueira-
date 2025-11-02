@@ -13,7 +13,7 @@ export default function Empresas() {
       {/* COLABORACIONES Y PROYECTOS */}
       <section className="container mx-auto px-20 py-16">
         <div className="mb-10">
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="font-titulo text-3xl font-semibold tracking-tight">
             Colaboraciones y proyectos institucionales
           </h2>
           <p className="mt-3 text-gray-600">
@@ -35,7 +35,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">Museo Municipal de Arte MUMART</h4>
+              <h4 className="font-titulo text-lg font-medium">Museo Municipal de Arte MUMART</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Exposición individual “Cicatrices” (2025). Una reflexión sobre las huellas,
                 la memoria y la reconstrucción desde la materia.
@@ -54,7 +54,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">FusiónARTE — City Bell</h4>
+              <h4 className="font-titulo text-lg font-medium">FusiónARTE — City Bell</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Muestra curada por Sebastián Guerrini (2025).  
                 Obras en diálogo con la noción de reinvención y transformación artística.
@@ -73,7 +73,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">Artweek Chile</h4>
+              <h4 className="font-titulo text-lg font-medium">Artweek Chile</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Participación internacional en Santiago de Chile (2021-2022).  
                 Stand individual con obras abstractas de gran formato.
@@ -92,7 +92,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">K Gallery — Philadelphia, USA</h4>
+              <h4 className="font-titulo text-lg font-medium">K Gallery — Philadelphia, USA</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Exhibición permanente (2022). Selección de obras abstractas en diálogo 
                 con el diseño interior contemporáneo.
@@ -111,7 +111,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">Club Alemán de Buenos Aires</h4>
+              <h4 className="font-titulo text-lg font-medium">Club Alemán de Buenos Aires</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Exposición colectiva “Esencia” (2023).  
                 Obras que abordan la sensibilidad y el vínculo entre forma y emoción.
@@ -130,7 +130,7 @@ export default function Empresas() {
               />
             </div>
             <div className="p-5">
-              <h4 className="text-lg font-medium">Hotel Hilton — Puerto Madero</h4>
+              <h4 className="font-titulo text-lg font-medium">Hotel Hilton — Puerto Madero</h4>
               <p className="mt-2 text-sm text-gray-600">
                 Muestra colectiva (2022). Integración de arte contemporáneo en espacios corporativos premium.
               </p>
@@ -146,7 +146,7 @@ export default function Empresas() {
     <div className="flex flex-col justify-between">
       {/* Texto */}
       <div>
-        <h3 className="text-3xl font-semibold mb-4">
+        <h3 className="font-titulo text-3xl font-semibold mb-4">
           Colaboración destacada  <span className="text-4xl">- Century 21 </span> 
         </h3>
         <p className="text-gray-700 leading-relaxed mt-9">
@@ -194,7 +194,7 @@ export default function Empresas() {
         </div>
       </div>
       {/* quiero centrar el texto de abajo de las imagenes */}
-        <p className="mt-10 text-xs italic text-gray-500 text-center ">
+        <p className="mt-10 text-sm italic text-gray-500 text-center ">
           “Cada obra se concibió como un puente entre la emoción del arte y la
           narrativa visual corporativa.”
         </p>
@@ -226,7 +226,7 @@ export default function Empresas() {
 
 {/* SECCIÓN INVITACIÓN A AMBIENTACIONES */}
 <section className="container mx-auto px-20 py-20 border-t border-gray-200 text-center">
-  <h3 className="text-2xl font-semibold mb-4">
+  <h3 className="font-titulo text-2xl font-semibold mb-4">
     Descubrí sus ambientaciones más destacadas
   </h3>
   <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -235,7 +235,7 @@ export default function Empresas() {
   </p>
   <Link
     href="/ambient"
-    className="inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+    className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
   >
     Ver ambientaciones
     <TbArrowUpRight className="text-xl" />

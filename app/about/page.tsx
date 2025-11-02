@@ -54,7 +54,7 @@ export default function About() {
 
     {/* Texto a la derecha */}
     <div className="lg:w-2/3 space-y-6 text-gray-700">
-      <h2 className="text-3xl font-semibold mb-6">Sobre mí</h2>
+      <h2 className="font-titulo text-3xl font-semibold mb-6">Sobre mí</h2>
       <p>
         Nacida en La Plata, Argentina, Alejandra Filgueira es una artista
         plástica especializada en arte abstracto. Se graduó en 1989 como
@@ -77,7 +77,7 @@ export default function About() {
 
       {/* STATEMENT */}
       <section className="container py-16 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-6">Declaración artística</h2>
+        <h2 className="font-titulo text-3xl font-semibold mb-6">Declaración artística</h2>
         <p className="max-w-4xl leading-relaxed text-gray-700">
           A través del arte, Alejandra transmite historias donde los materiales
           cobran protagonismo. Utiliza pintura asfáltica, acrílicos y metalizados
@@ -95,7 +95,7 @@ export default function About() {
 
       {/* FORMACIÓN */}
       <section className="container py-16 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-8">Formación Artística</h2>
+        <h2 className="font-titulo text-3xl font-semibold mb-8">Formación Artística</h2>
         <div className="grid md:grid-cols-2 gap-8 text-gray-700">
           <ul className="space-y-3">
             <li>• Lic. Mora Sofía Garese — Dibujo, pintura y grabado (2011)</li>
@@ -115,7 +115,7 @@ export default function About() {
 
       {/* EXPOSICIONES DESTACADAS */}
       <section className="container py-16 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-8">Exposiciones Destacadas</h2>
+        <h2 className="font-titulo text-3xl font-semibold mb-8">Exposiciones Destacadas</h2>
         <div className="grid md:grid-cols-2 gap-10">
           <div>
             <ul className="space-y-3 text-gray-700">
@@ -144,7 +144,7 @@ export default function About() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
           {/* Bloque completo (título + texto + botón) levemente más arriba */}
           <div className="lg:w-3/4 -translate-y-2">
-            <h2 className="text-3xl font-semibold mb-6">
+            <h2 className="font-titulo text-3xl font-semibold mb-6">
               Colaboraciones y Participaciones
             </h2>
 
@@ -194,7 +194,7 @@ export default function About() {
 
           {/* Texto a la derecha */}
           <div className="lg:w-1/2 space-y-4 text-gray-700">
-            <h2 className="text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
+            <h2 className="font-titulo text-3xl font-semibold mb-6">Taller y Proceso Creativo</h2>
             <p>
               En su taller ubicado en City Bell, Alejandra trabaja rodeada de materiales
               diversos, papeles, telas y pigmentos. Su proceso comienza con la
@@ -216,7 +216,7 @@ export default function About() {
   <div className="lg:flex items-center gap-12">
     {/* Texto a la izquierda */}
     <div className="lg:w-1/2 mb-8 lg:mb-0 space-y-4 text-gray-700 text-left">
-      <h2 className="text-3xl font-semibold mb-4">Cerámica y Creatividad</h2>
+      <h2 className="font-titulo text-3xl font-semibold mb-4">Cerámica y Creatividad</h2>
       <p>
         Además de la pintura y el arte abstracto, Alejandra explora el mundo
         de la cerámica, creando piezas únicas y llenas de detalle. Sus tazas,
@@ -260,7 +260,7 @@ export default function About() {
 
       {/* SECCIÓN INVITACIÓN A GALERÍA (ABOUT) */}
 <section className="container mx-auto px-20 py-20 border-t border-gray-200 text-center">
-  <h3 className="text-2xl font-semibold mb-6">
+  <h3 className="font-titulo text-2xl font-semibold mb-6">
     Explorá su universo pictórico
   </h3>
   <p className="text-gray-600 mb-12 max-w-2xl mx-auto">

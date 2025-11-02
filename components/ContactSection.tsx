@@ -88,7 +88,7 @@ export default function ContactSection({ className }: CommonProps) {
         {/* Botón de contacto */}
         <Link
           href="/contact"
-          className="inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+          className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
         >
           Contáctame
           <TbArrowUpRight className="text-xl" />

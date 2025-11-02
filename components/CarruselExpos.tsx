@@ -11,10 +11,10 @@ export default function CarruselExpos() {
             {/* Texto introductorio */}
             <div className="container grid pb-8 lg:grid-cols-2 gap-y-8">
                 <div className="text-left">
-                    <h1 className="py-4 text-4xl font-medium lg:text-6xl lg:py-0">Exposiciones Destacadas</h1>
+                    <h1 className="font-titulo py-4 text-4xl font-medium lg:text-4xl lg:py-0">Exposiciones Destacadas</h1>
                 </div>
                 <div>
-                    <h2 className="pb-6 text-xl font-bold tracking-wider">Algunas de las exposiciones más importantes de mi trayectoria</h2>
+                    <h2 className="font-titulo pb-6 text-xl font-bold tracking-wider">Algunas de las exposiciones más importantes de mi trayectoria</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 pb-4 text-gray-500 gap-x-6 gap-y-4">
                         <div>
                             <p>
