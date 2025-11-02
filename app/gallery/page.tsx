@@ -87,7 +87,6 @@ export default function Gallery() {
     { src: "/image/cuadros/cuadro84.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro85.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro86.jpeg", alt: "cuadro" },
-    { src: "/image/cuadros/cuadro87.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro88.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro89.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro90.jpeg", alt: "cuadro" },
@@ -104,23 +103,34 @@ export default function Gallery() {
   ];
   
   return (
-    <div className="container py-10">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="container py-16">
+      {/* HEADER */}
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-semibold mb-2">Galería de Obras</h1>
+        <p className="text-gray-500 max-w-xl mx-auto">
+          Un recorrido visual por las distintas etapas creativas de Alejandra.  
+          Cada obra es una fusión entre color, textura y emoción.
+        </p>
+      </header>
+
+      {/* GALERÍA */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
         {images.map((image, index) => (
-          <div key={index}>
-            <Image
-              className="h-auto max-w-full rounded-lg"
-              src={image.src}
-              alt={image.alt}
-              width={500}
-              height={300}
-            />
+          <div
+            key={index}
+            className="relative w-full aspect-[5/5] overflow-hidden rounded-xl bg-white p-1 hover:scale-105 transition-transform duration-300"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
-
 }
-
-//tengo que sacar un cuadro para que sea simetrico, cuando ordene veo cual
