@@ -99,16 +99,16 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-8 text-gray-700">
           <ul className="space-y-3">
             <li>• Lic. Mora Sofía Garese — Dibujo, pintura y grabado (2011)</li>
-            <li>• Prof. Kitty Di Bartolo — Técnicas pictóricas (2016–2017)</li>
-            <li>• Lic. Martín La Spina — Óleo y dibujo tradicional (2009–2014)</li>
+            <li>• Prof. Kitty Di Bartolo — Técnicas pictóricas (2016-2017)</li>
+            <li>• Lic. Martín La Spina — Óleo y dibujo tradicional (2009-2014)</li>
             <li>• Lic. Laura Bereciartua — Pintura sobre soportes alternativos (2015)</li>
-            <li>• Lic. Fernanda Piamonti — Figura humana, modelo vivo (2019–2021)</li>
+            <li>• Lic. Fernanda Piamonti — Figura humana, modelo vivo (2019-2021)</li>
           </ul>
           <ul className="space-y-3">
-            <li>• Croquis arquitectónico — Edificios fundacionales de La Plata (2022–2025)</li>
+            <li>• Croquis arquitectónico — Edificios fundacionales de La Plata (2022-2025)</li>
             <li>• Seminario de posgrado — Diana Aisemberg (2023)</li>
-            <li>• Clínicas de arte — Luis Altieri y Nieves Legaspi (2021–2025)</li>
-            <li>• Cursos de cerámica — Aragón, Sunseri y Arnau (2021–2025)</li>
+            <li>• Clínicas de arte — Luis Altieri y Nieves Legaspi (2021-2025)</li>
+            <li>• Cursos de cerámica — Aragón, Sunseri y Arnau (2021-2025)</li>
           </ul>
         </div>
       </section>
@@ -211,10 +211,11 @@ export default function About() {
         </div>
       </section>
 
+{/* CERÁMICA */}
 <section className="container py-16 border-t border-gray-200">
   <div className="lg:flex items-center gap-12">
     {/* Texto a la izquierda */}
-    <div className="lg:w-1/3 mb-8 lg:mb-0 space-y-4 text-gray-700 text-left">
+    <div className="lg:w-1/2 mb-8 lg:mb-0 space-y-4 text-gray-700 text-left">
       <h2 className="text-3xl font-semibold mb-4">Cerámica y Creatividad</h2>
       <p>
         Además de la pintura y el arte abstracto, Alejandra explora el mundo
@@ -223,47 +224,40 @@ export default function About() {
         expresión artística, mostrando otra faceta de su creatividad.
       </p>
       <p>
-        A través del proceso, cada pieza refleja dedicación, paciencia y amor
-        por el material, convirtiendo la cerámica en un lenguaje propio.
+        Cada pieza refleja dedicación, paciencia y amor por el material,
+        convirtiendo la cerámica en un lenguaje propio.
       </p>
+
+      {/* Botón coherente con el resto del sitio */}
+      <Link
+        href="/ceramic"
+        className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+      >
+        Ver más sobre cerámica
+        <TbArrowUpRight className="w-5 h-5" />
+      </Link>
     </div>
 
-    {/* Grid de imágenes a la derecha */}
-    <div className="lg:w-2/3 grid grid-cols-2 gap-4">
+    {/* Imágenes a la derecha (mejor proporción, sin recorte excesivo) */}
+    <div className="lg:w-1/2 grid grid-cols-2 gap-4">
       <Image
         src="/image/ceramica/ceramica15.jpeg"
         alt="Proceso de cerámica"
         width={600}
         height={400}
-        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+        className="w-full h-[320px] object-cover rounded-lg shadow-md"
       />
       <Image
-        src="/image/ceramica/ceramica2.jpg"
+        src="/image/ceramica/ceramica17.jpeg"
         alt="Producto de cerámica terminado"
         width={600}
         height={400}
-        className="w-full h-[350px] object-cover rounded-lg shadow-md"
-      />
-      <Image
-        src="/image/ceramica/ceramica40.jpeg"
-        alt="Proceso de cerámica"
-        width={600}
-        height={400}
-        className="w-full h-[350px] object-cover rounded-lg shadow-md"
-      />
-      <Image
-        src="/image/ceramica/ceramica39.jpeg"
-        alt="Producto de cerámica terminado"
-        width={600}
-        height={400}
-        className="w-full h-[350px] object-cover rounded-lg shadow-md"
+        className="w-full h-[320px] object-cover rounded-lg shadow-md"
       />
     </div>
   </div>
 </section>
 
-
-      
       {/* SECCIÓN INVITACIÓN A GALERÍA (ABOUT) */}
 <section className="container mx-auto px-20 py-20 border-t border-gray-200 text-center">
   <h3 className="text-2xl font-semibold mb-6">
@@ -282,7 +276,7 @@ export default function About() {
   >
     {/* Imagen del cuadro */}
     <Image
-      src="/image/cuadros/cuadro24.jpg" // ⚠️ reemplazá por una de tus obras destacadas
+      src="/image/cuadros/cuadro24.jpg"
       alt="Ver galería de obras"
       width={400}
       height={300}
