@@ -16,3 +16,39 @@
 .animate-fadeInScale {
   animation: fadeInScale 1.2s ease-out forwards;
 }
+
+/* globals.css */
+
+/* Importar Typold Condensed Light */
+@font-face {
+  font-family: 'Typold Condensed Light';
+  src: url('/Fonts/Typold Condensed Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Importar Typold Condensed Medium */
+@font-face {
+  font-family: 'Typold Condensed Medium';
+  src: url('/Fonts/Typold Condensed Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-title: 'Typold Condensed Medium', sans-serif;
+  --font-body: 'Typold Condensed Light', sans-serif;
+}
+
+.font-titulo {
+  font-family: var(--font-title);
+  font-weight: 500;
+}
+
+.font-texto {
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+

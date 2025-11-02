@@ -8,7 +8,7 @@ const InstagramGrid = () => {
 
   return (
     <section className="container mx-auto px-20 py-16 border-t border-gray-200">
-      <h3 className="text-3xl font-semibold mb-3">
+      <h3 className="font-titulo text-3xl font-semibold mb-3">
         Conocé más sobre mi mundo artístico
       </h3>
       <p className="lg:w-2/3 mb-10">
