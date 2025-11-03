@@ -54,7 +54,7 @@ export default function About() {
 
     {/* Texto a la derecha */}
     <div className="lg:w-2/3 space-y-6 text-gray-700">
-      <h2 className="font-titulo text-3xl font-semibold mb-6">Sobre mí</h2>
+      <h2 className="font-titulo text-3xl mb-6">Sobre mí</h2>
       <p>
         Nacida en La Plata, Argentina, Alejandra Filgueira es una artista
         plástica especializada en arte abstracto. Se graduó en 1989 como
