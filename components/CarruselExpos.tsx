@@ -7,33 +7,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function CarruselExpos() {
 
     return (
-        <div className="container py-16 border-t">
-            {/* Texto introductorio */}
-            <div className="container grid pb-8 lg:grid-cols-2 gap-y-8">
-                <div className="text-left">
-                    <h1 className="font-titulo py-4 text-4xl font-medium lg:text-4xl lg:py-0">Exposiciones Destacadas</h1>
-                </div>
-                <div>
-                    <h2 className="font-titulo pb-6 text-xl font-bold tracking-wider">Algunas de las exposiciones más importantes de mi trayectoria</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 pb-4 text-gray-500 gap-x-6 gap-y-4">
-                        <div>
-                            <p>
-                                A lo largo de mi carrera, he participado en múltiples exposiciones individuales y colectivas, tanto en Argentina como en el exterior. Cada obra refleja mi exploración de técnicas abstractas y experimentación.
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                Mi trabajo ha sido presentado en museos, galerías y ferias de arte, donde busco transmitir emociones y conectar con el espectador a través de texturas, colores y composición.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div className="container py-16 border-t">
+  {/* Texto introductorio */}
+  <div className="container grid pb-8 lg:grid-cols-2 gap-y-8">
+    <div className="text-left">
+      <h1 className="font-titulo py-4 text-4xl font-medium lg:text-4xl lg:py-0">
+        Exposiciones y Apariciones
+      </h1>
+    </div>
+    <div>
+      <p className="pb-4 text-gray-500">
+        A lo largo de mi carrera, he tenido la oportunidad de mostrar mi obra en diversas exposiciones y ferias de arte, compartiendo espacios con otros artistas y conectando con públicos variados.
+      </p>
+      <p className="text-gray-500">
+        Esta selección reúne otras exposiciones destacadas, complementando las colaboraciones institucionales y proyectos individuales que ya presenté. Cada muestra refleja momentos importantes de mi trayectoria y mi evolución artística.
+      </p>
+    </div>
+  </div>
 
             {/* Swiper de imágenes */}
-            <div className="-px-16">
+            <div>
             <Swiper
-                slidesPerView={1}
+                slidesPerView={4}
                 loop={true}
                 rewind={false}
                 breakpoints={{
@@ -46,20 +41,11 @@ export default function CarruselExpos() {
                 {/* Cada SwiperSlide con imagen ajustada */}
                 <SwiperSlide>
                     <Image
-                        src="/image/exposiciones/expo27.jpeg"
-                        alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
                         src="/image/exposiciones/expo12.jpeg"
                         alt="Exposición FusiónARTE City Bell"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -68,7 +54,7 @@ export default function CarruselExpos() {
                         alt="Muestra colectiva Facultad de Derecho UBA"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -77,7 +63,7 @@ export default function CarruselExpos() {
                         alt="ArteView Cariló y Pinamar"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -86,16 +72,16 @@ export default function CarruselExpos() {
                         alt="Artweek Chile"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
-                                <SwiperSlide>
+                <SwiperSlide>
                     <Image
                         src="/image/exposiciones/expo6.jpeg"
                         alt="Exposición Cicatrices MUMART La Plata"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -104,7 +90,7 @@ export default function CarruselExpos() {
                         alt="Muestra colectiva Facultad de Derecho UBA"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -113,7 +99,7 @@ export default function CarruselExpos() {
                         alt="ArteView Cariló y Pinamar"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -122,16 +108,16 @@ export default function CarruselExpos() {
                         alt="Artweek Chile"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
-                                <SwiperSlide>
+                <SwiperSlide>
                     <Image
                         src="/image/exposiciones/expo18.jpeg"
                         alt="Exposición Cicatrices MUMART La Plata"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -140,7 +126,7 @@ export default function CarruselExpos() {
                         alt="Exposición FusiónARTE City Bell"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -149,7 +135,7 @@ export default function CarruselExpos() {
                         alt="Muestra colectiva Facultad de Derecho UBA"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -158,25 +144,7 @@ export default function CarruselExpos() {
                         alt="ArteView Cariló y Pinamar"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo1.jpeg"
-                        alt="Artweek Chile"
-                        width={520}
-                        height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
-                    />
-                </SwiperSlide>
-                                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo30.jpeg"
-                        alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -185,7 +153,7 @@ export default function CarruselExpos() {
                         alt="Exposición FusiónARTE City Bell"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -194,7 +162,7 @@ export default function CarruselExpos() {
                         alt="Muestra colectiva Facultad de Derecho UBA"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -203,7 +171,7 @@ export default function CarruselExpos() {
                         alt="ArteView Cariló y Pinamar"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -212,7 +180,7 @@ export default function CarruselExpos() {
                         alt="Artweek Chile"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                                 <SwiperSlide>
@@ -221,7 +189,7 @@ export default function CarruselExpos() {
                         alt="Exposición Cicatrices MUMART La Plata"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -230,7 +198,7 @@ export default function CarruselExpos() {
                         alt="Exposición FusiónARTE City Bell"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -239,7 +207,7 @@ export default function CarruselExpos() {
                         alt="Muestra colectiva Facultad de Derecho UBA"
                         width={520}
                         height={700}
-                        className="w-full h-[450px] object-fill rounded-lg"
+                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
                     />
                 </SwiperSlide>
             </Swiper>

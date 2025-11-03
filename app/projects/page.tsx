@@ -110,9 +110,32 @@ export default function Empresas() {
   </div>
 </section>
 
+<div className="container py-20 border-t">
+  <div className="grid lg:grid-cols-3 gap-10">
+    <div className="lg:col-span-1">
+      <h1 className="font-titulo text-4xl font-medium">Empresas y Espacios Culturales</h1>
+      <h2 className="font-titulo text-lg font-semibold text-gray-600 mt-4">
+        Colaboraciones que impulsan la difusión del arte contemporáneo
+      </h2>
+    </div>
+    <div className="lg:col-span-2 text-gray-500 leading-relaxed space-y-6">
+      <p>
+        En los últimos años, participé en diversos proyectos junto a entidades culturales, marcas y galerías interesadas en integrar el arte en nuevas experiencias. 
+        Cada colaboración representó una oportunidad de acercar mi trabajo a públicos diferentes y generar diálogos entre la estética y la identidad de cada organización.
+      </p>
+      <p>
+        Desde intervenciones en espacios comerciales hasta exposiciones conjuntas con otras artistas, cada alianza reafirma la importancia del arte como medio de conexión y transformación.
+      </p>
+      <p>
+        Estas experiencias me permitieron compartir mi visión en contextos variados, fortaleciendo la relación entre el arte contemporáneo y el ámbito institucional.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* CARRUSEL EXPOSICIONES */}
-      <section className="container mx-auto border-t border-gray-200">
+      <section className="container mx-auto px-0 border-t border-gray-200">
         <CarruselExpos />
       </section>
 
