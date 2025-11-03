@@ -156,13 +156,14 @@ export default function About() {
               empresariales y culturales, donde el arte se convierte en un puente de comunicación.
             </p>
 
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
-            >
-              Ver proyectos completos
-              <TbArrowUpRight className="w-5 h-5" />
-            </Link>
+<Link
+  href="/projects"
+  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
+>
+  Ver proyectos completos
+  <TbArrowUpRight className="w-5 h-5" />
+</Link>
+
           </div>
 
           {/* Imagen */}
@@ -229,13 +230,14 @@ export default function About() {
       </p>
 
       {/* Botón coherente con el resto del sitio */}
-      <Link
-        href="/ceramic"
-        className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition"
-      >
-        Ver más sobre cerámica
-        <TbArrowUpRight className="w-5 h-5" />
-      </Link>
+<Link
+  href="/ceramic"
+  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
+>
+  Ver más sobre cerámica
+  <TbArrowUpRight className="w-5 h-5" />
+</Link>
+
     </div>
 
     {/* Imágenes a la derecha (mejor proporción, sin recorte excesivo) */}
