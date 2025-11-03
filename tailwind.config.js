@@ -6,7 +6,10 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+            typoldLight: ['"Typold Condensed Light"', "sans-serif"],
+      typoldMedium: ['"Typold Condensed Medium"', "sans-serif"],
+    },
     container: {
       center: true,
       padding: {
