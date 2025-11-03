@@ -3,6 +3,7 @@ import Link from "next/link";
 import CarruselExpos from "@/components/CarruselExpos";
 import HeroSection from "@/components/HeroSection";
 import { TbArrowUpRight } from "react-icons/tb";
+import CatalogueSection from "@/components/CardsExpos";
 
 export default function Empresas() {
   return (
@@ -23,120 +24,11 @@ export default function Empresas() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {/* TARJETA 1 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo30.jpeg"
-                alt="Exposición MUMART"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">Museo Municipal de Arte MUMART</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Exposición individual “Cicatrices” (2025). Una reflexión sobre las huellas,
-                la memoria y la reconstrucción desde la materia.
-              </p>
-            </div>
-          </article>
+      {/* CARRUSEL EXPOSICIONES */}
+      <div>
+        <CatalogueSection />
+      </div>
 
-          {/* TARJETA 2 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo4.jpeg"
-                alt="FusiónARTE City Bell"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">FusiónARTE — City Bell</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Muestra curada por Sebastián Guerrini (2025).  
-                Obras en diálogo con la noción de reinvención y transformación artística.
-              </p>
-            </div>
-          </article>
-
-          {/* TARJETA 3 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo4.jpeg"
-                alt="ArtWeek Chile"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">Artweek Chile</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Participación internacional en Santiago de Chile (2021-2022).  
-                Stand individual con obras abstractas de gran formato.
-              </p>
-            </div>
-          </article>
-
-          {/* TARJETA 4 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo4.jpeg"
-                alt="K Gallery Philadelphia"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">K Gallery — Philadelphia, USA</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Exhibición permanente (2022). Selección de obras abstractas en diálogo 
-                con el diseño interior contemporáneo.
-              </p>
-            </div>
-          </article>
-
-          {/* TARJETA 5 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo4.jpeg"
-                alt="Club Alemán de Buenos Aires"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">Club Alemán de Buenos Aires</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Exposición colectiva “Esencia” (2023).  
-                Obras que abordan la sensibilidad y el vínculo entre forma y emoción.
-              </p>
-            </div>
-          </article>
-
-          {/* TARJETA 6 */}
-          <article className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md transition">
-            <div className="relative h-48 w-full">
-              <Image
-                src="/image/exposiciones/expo4.jpeg"
-                alt="Hotel Hilton Puerto Madero"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="p-5">
-              <h4 className="font-titulo text-lg font-medium">Hotel Hilton — Puerto Madero</h4>
-              <p className="mt-2 text-sm text-gray-600">
-                Muestra colectiva (2022). Integración de arte contemporáneo en espacios corporativos premium.
-              </p>
-            </div>
-          </article>
-        </div>
       </section>
 
 {/* COLABORACIÓN DESTACADA - CENTURY 21 */}
@@ -218,9 +110,32 @@ export default function Empresas() {
   </div>
 </section>
 
+<div className="container py-20 border-t">
+  <div className="grid lg:grid-cols-3 gap-10">
+    <div className="lg:col-span-1">
+      <h1 className="font-titulo text-4xl font-medium">Empresas y Espacios Culturales</h1>
+      <h2 className="font-titulo text-lg font-semibold text-gray-600 mt-4">
+        Colaboraciones que impulsan la difusión del arte contemporáneo
+      </h2>
+    </div>
+    <div className="lg:col-span-2 text-gray-500 leading-relaxed space-y-6">
+      <p>
+        En los últimos años, participé en diversos proyectos junto a entidades culturales, marcas y galerías interesadas en integrar el arte en nuevas experiencias. 
+        Cada colaboración representó una oportunidad de acercar mi trabajo a públicos diferentes y generar diálogos entre la estética y la identidad de cada organización.
+      </p>
+      <p>
+        Desde intervenciones en espacios comerciales hasta exposiciones conjuntas con otras artistas, cada alianza reafirma la importancia del arte como medio de conexión y transformación.
+      </p>
+      <p>
+        Estas experiencias me permitieron compartir mi visión en contextos variados, fortaleciendo la relación entre el arte contemporáneo y el ámbito institucional.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* CARRUSEL EXPOSICIONES */}
-      <section className="container mx-auto px-2 border-t border-gray-200">
+      <section className="container mx-auto px-0 border-t border-gray-200">
         <CarruselExpos />
       </section>
 
@@ -235,7 +150,7 @@ export default function Empresas() {
   </p>
   <Link
     href="/ambient"
-    className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+    className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
   >
     Ver ambientaciones
     <TbArrowUpRight className="text-xl" />

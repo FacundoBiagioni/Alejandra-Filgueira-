@@ -85,9 +85,14 @@ export default function ContactMe() {
           <textarea name="message" required rows={5} className="w-full border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
         </div>
 
-        <button type="submit" disabled={isLoading} className="font-titulo w-full bg-black text-white font-medium py-3 rounded-lg hover:bg-gray-800 transition disabled:opacity-50">
-          {isLoading ? "Enviando..." : "Enviar mensaje"}
-        </button>
+<button
+  type="submit"
+  disabled={isLoading}
+  className="font-titulo w-full inline-flex items-center justify-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition disabled:opacity-50"
+>
+  {isLoading ? "Enviando..." : "Enviar mensaje"}
+</button>
+
 
         {sent && (
           <p className="text-green-600 text-center font-medium mt-3 transition-opacity duration-[4000ms] opacity-100">
