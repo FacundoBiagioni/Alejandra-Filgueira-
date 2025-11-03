@@ -158,7 +158,7 @@ export default function About() {
 
 <Link
   href="/projects"
-  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
+  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
 >
   Ver proyectos completos
   <TbArrowUpRight className="w-5 h-5" />

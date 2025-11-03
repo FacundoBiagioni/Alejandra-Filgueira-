@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ButtonUp from '@/components/ButtonUp';
 
 export const metadata: Metadata = {
   title: 'Interior Design Portfolio',
@@ -15,10 +16,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
-      <body className="font-texto">
+      <body className="font-texto relative">
         <Header />
         {children}
         <Footer />
+        <ButtonUp />
       </body>
     </html>
   );

@@ -41,7 +41,7 @@ export default function Navigation() {
                     <Link 
                         key={link.href} 
                         href={link.href} 
-                        className={pathname === link.href ? 'text-black font-semibold' : ''}
+                        className={pathname === link.href ? 'text-black font-titulo font-semibold' : ''}
                     >
                         {link.label}
                     </Link>

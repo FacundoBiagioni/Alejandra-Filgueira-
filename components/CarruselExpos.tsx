@@ -32,8 +32,8 @@ export default function CarruselExpos() {
                 loop={true}
                 rewind={false}
                 breakpoints={{
-                    640: { slidesPerView: 2, spaceBetween: 16 },
-                    1024: { slidesPerView: 3, spaceBetween: 24 },
+                    640: { slidesPerView: 3, spaceBetween: 16 },
+                    1024: { slidesPerView: 4, spaceBetween: 24 },
                 }}
                 autoplay={{ delay: 2500, disableOnInteraction: false }}
                 modules={[Autoplay]}

@@ -15,7 +15,7 @@ export default function HeroSection() {
             trabajos por encargo, intervenciones y colaboraciones que muestran la <br />
             experiencia profesional de Alejandra con organismos y marcas.
           </p>
-          <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
+          <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg transition-all bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
             Contactar para proyecto <TbArrowUpRight className="w-5 h-5 ml-2" />
           </button>
         </div>
