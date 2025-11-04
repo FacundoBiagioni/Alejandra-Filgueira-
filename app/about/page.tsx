@@ -9,31 +9,41 @@ export default function About() {
   return (
     <div className="bg-white text-gray-800">
 
-        {/* Hero principal */}
-        <section
-            className="relative w-full h-[75vh] bg-center bg-no-repeat flex items-center justify-center overflow-hidden"
-            style={{
-                backgroundImage: "url('/image/procesos/proceso9.jpeg')",
-                backgroundSize: "cover",
-                imageRendering: "auto",
-            }}
-            >
-        {/* Capa de oscurecimiento más fuerte */}
-        <div className="absolute inset-0 bg-black/55"></div>
+<section
+  className="relative w-full h-[75vh] bg-center bg-no-repeat flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: "url('/image/procesos/proceso9.jpeg')",
+    backgroundSize: "cover",
+    imageRendering: "auto",
+  }}
+>
+  <div className="absolute inset-0 bg-black/55"></div>
 
-        {/* Logo centrado con animación */}
-        <div className="relative z-5 animate-fadeInScale">
-            <Image
-                src="/logo.png"
-                alt="Logo Alejandra Filgueira"
-                width={480}
-                height={480}
-                className="object-contain"
-                priority
-            />
-        </div>
-        </section>
-
+  {/* Duplicado del logo para crear borde */}
+  <div className="relative z-4 animate-fadeInScale">
+    <div className="relative inline-block">
+      {/* Capa de fondo expandida */}
+      <Image
+        src="/logo.png"
+        alt="Borde del logo"
+        width={600}
+        height={600}
+        className="absolute top-[2px] left-[2px] opacity-70"
+        style={{ filter: 'brightness(0) invert(1)' }}
+        priority
+      />
+      {/* Logo principal */}
+      <Image
+        src="/logo.png"
+        alt="Logo Alejandra Filgueira"
+        width={480}
+        height={480}
+        className="relative z-10 object-contain"
+        priority
+      />
+    </div>
+  </div>
+</section>
 
 {/* BIO */}
 <section className="container py-20 border-t border-gray-200">
@@ -158,7 +168,7 @@ export default function About() {
 
 <Link
   href="/projects"
-  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
+  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
 >
   Ver proyectos completos
   <TbArrowUpRight className="w-5 h-5" />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // ✅ Importamos Link
 import { TbArrowUpRight } from "react-icons/tb";
 
 export default function HeroSection() {
@@ -12,12 +13,16 @@ export default function HeroSection() {
           </h1>
           <p className="pb-6 text-gray-600 xl:pb-10">
             Proyectos realizados para instituciones, marcas y empresas. <br />
-            trabajos por encargo, intervenciones y colaboraciones que muestran la <br />
+            Trabajos por encargo, intervenciones y colaboraciones que muestran la <br />
             experiencia profesional de Alejandra con organismos y marcas.
           </p>
-          <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg transition-all bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
-            Contactar para proyecto <TbArrowUpRight className="w-5 h-5 ml-2" />
-          </button>
+
+          {/* ✅ Botón con Link a /contacto */}
+          <Link href="/contact">
+            <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg transition-all bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
+              Contactar para proyecto <TbArrowUpRight className="w-5 h-5 ml-2" />
+            </button>
+          </Link>
         </div>
 
         <div className="w-1/2 relative">
