@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import ButtonUp from '@/components/ButtonUp';
+import type { Metadata } from "next";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ButtonUp from "@/components/ButtonUp";
 
 export const metadata: Metadata = {
-  title: 'Interior Design Portfolio',
-  description: 'Portfolio showcasing interior design work',
+  title: "Interior Design Portfolio",
+  description: "Portfolio showcasing interior design work",
 };
 
 interface RootLayoutProps {
@@ -16,6 +16,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
+      <head>
+        {/* 🔧 Esto es clave para que el responsive funcione bien en celulares */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className="font-texto relative">
         <Header />
         {children}
