@@ -54,34 +54,34 @@ export default function Ambient() {
   ];
 
   return (
-    <div className="container py-16">
-      {/* HEADER */}
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-semibold mb-2">Ambientaciones</h1>
-        <p className="text-gray-500 max-w-xl mx-auto">
+    <section className="container py-16">
+      {/* ENCABEZADO */}
+      <header className="text-center mb-12 px-4">
+        <h1 className="text-4xl font-semibold mb-2 text-gray-900">
+          Ambientaciones
+        </h1>
+        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
           Inspiraciones para espacios donde el arte y la decoración se integran.  
           Cada ambiente refleja una atmósfera única creada a partir de las obras.
         </p>
       </header>
 
       {/* GALERÍA */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white p-1 hover:scale-105 transition-transform duration-300"
+            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md p-1 transition-all duration-300 hover:scale-[1.03]"
           >
-            <div className="relative w-full h-full">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

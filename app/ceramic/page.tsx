@@ -46,34 +46,32 @@ export default function Ceramic() {
   ];
 
   return (
-    <div className="container py-16">
+    <section className="container py-16">
       {/* HEADER */}
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-semibold mb-2">Colección de Cerámica</h1>
-        <p className="text-gray-500 max-w-xl mx-auto">
+      <header className="text-center mb-12 px-4">
+        <h1 className="text-4xl font-semibold mb-2 text-gray-900">Colección de Cerámica</h1>
+        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
           Una selección artesanal de piezas únicas en cerámica.  
           Cada forma, textura y color cuenta una historia.
         </p>
       </header>
 
       {/* GALERÍA */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white p-1 hover:scale-105 transition-transform duration-300"
+            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white shadow-sm p-1 transition-all duration-300 hover:scale-[1.03] hover:shadow-md"
           >
-            <div className="relative w-full h-full">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

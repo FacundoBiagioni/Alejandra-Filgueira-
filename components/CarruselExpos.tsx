@@ -1,217 +1,81 @@
 "use client";
+
 import Image from "next/image";
-import 'swiper/css';
-import { Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function CarruselExpos() {
-
-    return (
-<div className="container py-16 border-t">
-  {/* Texto introductorio */}
-  <div className="container grid pb-8 lg:grid-cols-2 gap-y-8">
-    <div className="text-left">
-      <h1 className="font-titulo py-4 text-4xl font-medium lg:text-4xl lg:py-0">
-        Exposiciones y Apariciones
-      </h1>
-    </div>
-    <div>
-      <p className="pb-4 text-gray-500">
-        A lo largo de mi carrera, he tenido la oportunidad de mostrar mi obra en diversas exposiciones y ferias de arte, compartiendo espacios con otros artistas y conectando con públicos variados.
-      </p>
-      <p className="text-gray-500">
-        Esta selección reúne otras exposiciones destacadas, complementando las colaboraciones institucionales y proyectos individuales que ya presenté. Cada muestra refleja momentos importantes de mi trayectoria y mi evolución artística.
-      </p>
-    </div>
-  </div>
-
-            {/* Swiper de imágenes */}
-            <div>
-            <Swiper
-                slidesPerView={4}
-                loop={true}
-                rewind={false}
-                breakpoints={{
-                    640: { slidesPerView: 3, spaceBetween: 16 },
-                    1024: { slidesPerView: 4, spaceBetween: 24 },
-                }}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
-                modules={[Autoplay]}
-            >
-                {/* Cada SwiperSlide con imagen ajustada */}
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo12.jpeg"
-                        alt="Exposición FusiónARTE City Bell"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo2.jpeg"
-                        alt="Muestra colectiva Facultad de Derecho UBA"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo10.jpeg"
-                        alt="ArteView Cariló y Pinamar"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo11.jpeg"
-                        alt="Artweek Chile"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo6.jpeg"
-                        alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo14.jpeg"
-                        alt="Muestra colectiva Facultad de Derecho UBA"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo15.jpeg"
-                        alt="ArteView Cariló y Pinamar"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo16.jpeg"
-                        alt="Artweek Chile"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo18.jpeg"
-                        alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo19.jpeg"
-                        alt="Exposición FusiónARTE City Bell"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo20.jpeg"
-                        alt="Muestra colectiva Facultad de Derecho UBA"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo21.jpeg"
-                        alt="ArteView Cariló y Pinamar"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo35.jpeg"
-                        alt="Exposición FusiónARTE City Bell"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo36.jpeg"
-                        alt="Muestra colectiva Facultad de Derecho UBA"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo38.jpeg"
-                        alt="ArteView Cariló y Pinamar"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo42.jpeg"
-                        alt="Artweek Chile"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo43.jpeg"
-                        alt="Exposición Cicatrices MUMART La Plata"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo44.jpeg"
-                        alt="Exposición FusiónARTE City Bell"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src="/image/exposiciones/expo52.jpeg"
-                        alt="Muestra colectiva Facultad de Derecho UBA"
-                        width={520}
-                        height={700}
-                        className="w-full h-[320px] object-fill rounded-lg border-2 border-gray-200"
-                    />
-                </SwiperSlide>
-            </Swiper>
-            </div>
+  return (
+    <div className="container px-6 sm:px-10 md:px-16 lg:px-20 py-16 border-t border-gray-200">
+      {/* Texto introductorio */}
+      <div className="grid lg:grid-cols-2 gap-10 pb-10">
+        <div className="text-center lg:text-left">
+          <h1 className="font-titulo text-3xl sm:text-4xl font-medium mb-4">
+            Exposiciones y Apariciones
+          </h1>
         </div>
-    )
+        <div className="text-gray-600 leading-relaxed space-y-4 text-justify sm:text-left">
+          <p>
+            A lo largo de mi carrera, he tenido la oportunidad de mostrar mi
+            obra en diversas exposiciones y ferias de arte, compartiendo espacios
+            con otros artistas y conectando con públicos variados.
+          </p>
+          <p>
+            Esta selección reúne otras exposiciones destacadas, complementando las
+            colaboraciones institucionales y proyectos individuales que ya presenté.
+            Cada muestra refleja momentos importantes de mi trayectoria y mi evolución
+            artística.
+          </p>
+        </div>
+      </div>
+
+      {/* Swiper de imágenes */}
+      <div>
+        <Swiper
+          slidesPerView={1.3}
+          spaceBetween={12}
+          loop={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          modules={[Autoplay]}
+          breakpoints={{
+            640: { slidesPerView: 2.3, spaceBetween: 16 },
+            1024: { slidesPerView: 4, spaceBetween: 24 },
+          }}
+        >
+          {[
+            "expo12.jpeg",
+            "expo2.jpeg",
+            "expo10.jpeg",
+            "expo11.jpeg",
+            "expo6.jpeg",
+            "expo14.jpeg",
+            "expo15.jpeg",
+            "expo16.jpeg",
+            "expo18.jpeg",
+            "expo19.jpeg",
+            "expo20.jpeg",
+            "expo21.jpeg",
+            "expo35.jpeg",
+            "expo36.jpeg",
+            "expo38.jpeg",
+            "expo42.jpeg",
+            "expo43.jpeg",
+            "expo44.jpeg",
+            "expo52.jpeg",
+          ].map((img, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={`/image/exposiciones/${img}`}
+                alt={`Exposición ${index + 1}`}
+                width={520}
+                height={700}
+                className="w-full h-[280px] sm:h-[320px] object-fill rounded-lg border border-gray-200 shadow-sm transition-transform duration-500 hover:scale-[1.02]"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  );
 }
