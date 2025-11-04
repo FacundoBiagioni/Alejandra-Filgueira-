@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function CarruselExpos() {
   return (
-    <div className="container px-6 sm:px-10 lg:px-20 py-16 border-t border-gray-200">
+    <div className="container px-6 sm:px-10 md:px-16 lg:px-20 py-16 border-t border-gray-200">
       {/* Texto introductorio */}
       <div className="grid lg:grid-cols-2 gap-10 pb-10">
         <div className="text-center lg:text-left">
