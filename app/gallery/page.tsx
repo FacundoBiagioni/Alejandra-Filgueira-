@@ -40,7 +40,6 @@ export default function Gallery() {
     { src: "/image/cuadros/cuadro8.jpg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro2.jpg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro1.jpg", alt: "cuadro" },
-    
     { src: "/image/cuadros/cuadro41.jpg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro42.jpg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro43.jpg", alt: "cuadro" },
@@ -77,7 +76,7 @@ export default function Gallery() {
     { src: "/image/cuadros/cuadro74.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro75.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro76.jpeg", alt: "cuadro" },
-    { src: "/image/cuadros/cuadro77.jpeg", alt: "cuadro" }, 
+    { src: "/image/cuadros/cuadro77.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro78.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro79.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro80.jpeg", alt: "cuadro" },
@@ -101,36 +100,36 @@ export default function Gallery() {
     { src: "/image/cuadros/cuadro99.jpeg", alt: "cuadro" },
     { src: "/image/cuadros/cuadro100.webp", alt: "cuadro" },
   ];
-  
+
   return (
-    <div className="container py-16">
-      {/* HEADER */}
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-semibold mb-2">Galería de Obras</h1>
-        <p className="text-gray-500 max-w-xl mx-auto">
+    <section className="container py-16">
+      {/* ENCABEZADO */}
+      <header className="text-center mb-12 px-4">
+        <h1 className="text-4xl font-semibold mb-2 text-gray-900">
+          Galería de Obras
+        </h1>
+        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
           Un recorrido visual por las distintas etapas creativas de Alejandra.  
           Cada obra es una fusión entre color, textura y emoción.
         </p>
       </header>
 
       {/* GALERÍA */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[5/5] overflow-hidden rounded-xl bg-white p-1 hover:scale-105 transition-transform duration-300"
+            className="relative w-full aspect-[1/1] overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md p-1 transition-all duration-300 hover:scale-[1.03]"
           >
-            <div className="relative w-full h-full">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -148,46 +148,46 @@ export default function About() {
         </div>
       </section>
 
-      {/* COLABORACIONES / MARCAS */}
-      <section className="container mx-auto px-20 py-16 border-t border-gray-200">
-        {/* Contenido principal */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
-          {/* Bloque completo (título + texto + botón) levemente más arriba */}
-          <div className="lg:w-3/4 -translate-y-2">
-            <h2 className="font-titulo text-3xl font-semibold mb-6">
-              Colaboraciones y Participaciones
-            </h2>
+{/* COLABORACIONES / MARCAS */}
+<section className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-20 py-10 sm:py-12 md:py-16 border-t border-gray-200">
+  {/* Contenido principal */}
+  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 sm:gap-10 md:gap-12">
+    {/* Bloque completo (título + texto + botón) levemente más arriba */}
+    <div className="w-full lg:w-3/4 -translate-y-2">
+      <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-6">
+        Colaboraciones y Participaciones
+      </h2>
 
-            <p className="text-gray-700 leading-relaxed mb-6">
-              A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
-              fundaciones y marcas de gran reconocimiento, como la Fundación Avon
-              Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
-              Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
-              empresariales y culturales, donde el arte se convierte en un puente de comunicación.
-            </p>
+      <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
+        A lo largo de su trayectoria, Alejandra ha colaborado con instituciones,
+        fundaciones y marcas de gran reconocimiento, como la Fundación Avon
+        Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
+        Su trabajo ha estado presente en exposiciones vinculadas a causas sociales,
+        empresariales y culturales, donde el arte se convierte en un puente de comunicación.
+      </p>
 
-<Link
-  href="/projects"
-  className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
->
-  Ver proyectos completos
-  <TbArrowUpRight className="w-5 h-5" />
-</Link>
+      <Link
+        href="/projects"
+        className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+      >
+        Ver proyectos completos
+        <TbArrowUpRight className="w-5 h-5" />
+      </Link>
+    </div>
 
-          </div>
+    {/* Imagen */}
+    <div className="w-full lg:w-1/4 overflow-hidden rounded-lg shadow-md">
+      <Image
+        src="/image/artes para empresas/empresa5.jpg"
+        alt="Alejandra Filgueira en su taller"
+        width={400}
+        height={400}
+        className="rounded-lg object-cover w-full h-[250px] sm:h-[280px] md:h-[300px] shadow-md"
+      />
+    </div>
+  </div>
+</section>
 
-          {/* Imagen */}
-          <div className="lg:w-1/4 w-full overflow-hidden rounded-lg shadow-md">
-            <Image
-              src="/image/artes para empresas/empresa5.jpg"
-              alt="Alejandra Filgueira en su taller"
-              width={400}
-              height={400}
-              className="rounded-lg object-cover w-full h-[300px] shadow-md"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* TALLER / PROCESO */}
       <section className="container py-16 border-t border-gray-200">

@@ -1,32 +1,33 @@
+"use client";
 import { TbArrowUpRight } from "react-icons/tb";
 import { CommonProps } from "@/types";
 import Link from "next/link";
 
 export default function ContactSection({ className }: CommonProps) {
   return (
-    <div className={`bg-zinc-100 py-14 ${className || ""}`}>
-      <div className="container mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:justify-between">
+    <section className={`bg-zinc-100 py-16 px-6 sm:px-10 lg:px-20 ${className || ""}`}>
+      <div className="container mx-auto flex flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between">
         
-        {/* Texto principal */}
-        <div className="text-center">
-          <p className="text-2xl text-gray-800">Tu próximo paso,</p>
-          <h1 className="text-3xl font-medium lg:text-6xl text-gray-900">
+        {/* 🔹 Texto principal */}
+        <div className="text-center lg:text-left">
+          <p className="text-xl sm:text-2xl text-gray-800">Tu próximo paso,</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-900">
             Un mensaje
           </h1>
         </div>
 
-        {/* Íconos de redes sociales */}
-        <ul className="flex justify-center items-center gap-4">
-
+        {/* 🔹 Íconos de redes sociales */}
+        <ul className="flex justify-center items-center gap-5 sm:gap-6 flex-wrap">
           {/* Instagram */}
           <li>
             <a
               href="https://www.instagram.com/alejandrafilgueira/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg cursor-pointer transition-transform hover:scale-110 group"
+              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              <span className="absolute left-1/2 -translate-x-1/2 -top-12 text-white bg-black text-sm py-1 px-2 rounded shadow opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              {/* Tooltip */}
+              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 Instagram
               </span>
               <svg
@@ -43,12 +44,12 @@ export default function ContactSection({ className }: CommonProps) {
           {/* LinkedIn */}
           <li>
             <a
-              href="https://www.linkedin.com/in/alejandra-filgueira-2a53512b/" // 👈 Reemplazá con tu URL real
+              href="https://www.linkedin.com/in/alejandra-filgueira-2a53512b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg cursor-pointer transition-transform hover:scale-110 group"
+              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              <span className="absolute left-1/2 -translate-x-1/2 -top-12 text-white bg-black text-sm py-1 px-2 rounded shadow opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 LinkedIn
               </span>
               <svg
@@ -62,15 +63,15 @@ export default function ContactSection({ className }: CommonProps) {
             </a>
           </li>
 
-            {/* Facebook */}
+          {/* Facebook */}
           <li>
             <a
               href="https://www.facebook.com/alejandra.filgueira.39?locale=es_LA"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-lg cursor-pointer transition-transform hover:scale-110 group"
+              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              <span className="absolute left-1/2 -translate-x-1/2 -top-12 text-white bg-black text-sm py-1 px-2 rounded shadow opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 Facebook
               </span>
               <svg
@@ -85,15 +86,15 @@ export default function ContactSection({ className }: CommonProps) {
           </li>
         </ul>
 
-        {/* Botón de contacto */}
+        {/* 🔹 Botón de contacto */}
         <Link
           href="/contact"
-          className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+          className="font-titulo inline-flex items-center gap-1 px-7 py-3 text-sm sm:text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
         >
           Contáctame
-          <TbArrowUpRight className="text-xl" />
+          <TbArrowUpRight className="text-lg sm:text-xl" />
         </Link>
       </div>
-    </div>
+    </section>
   );
 }

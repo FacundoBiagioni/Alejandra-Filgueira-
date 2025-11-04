@@ -2,25 +2,23 @@ import ContactSection from "./ContactSection";
 
 export default function Footer() {
   return (
-    <div>
-      {/* Contact Section */}
+    <div className="bg-zinc-100">
+      {/* 🔹 Sección de contacto */}
       <ContactSection />
 
-      {/* Línea divisoria entre ContactSection y Footer */}
+      {/* 🔹 Línea divisoria */}
       <div className="w-full flex justify-center bg-zinc-100">
-        <div className="w-11/12 border-t border-gray-300 opacity-70" /> 
+        <div className="w-11/12 border-t border-gray-300 opacity-70" />
       </div>
 
-      {/* Footer principal */}
-      <div className="bg-zinc-100">
-        <div className="py-10 bg-zinc-100">
-          <div className="container text-center text-gray-500">
-            <div className="pb-4 lg:pb-0">
-              <p>&copy;2025 Alejandra Filgueira — Todos los derechos reservados</p>
-            </div>
-          </div>
+      {/* 🔹 Pie de página principal */}
+      <footer className="py-10 text-center text-gray-500 text-sm sm:text-base">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-20">
+          <p className="leading-relaxed">
+            &copy; 2025 Alejandra Filgueira — Todos los derechos reservados
+          </p>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
