@@ -47,7 +47,7 @@ export default function Navigation() {
       <button
         onClick={() => setOpen(!open)}
         aria-label="Abrir menú"
-        className="relative z-[999] flex flex-col justify-between w-6 h-4 sm:w-7 sm:h-5 lg:hidden"
+        className="relative z-[999] flex flex-col justify-between w-6 h-4 sm:w-7 sm:h-5 lg:hidden border border-red-500"
       >
         <motion.span
           className="block h-0.5 bg-gray-700 rounded"
@@ -98,7 +98,7 @@ export default function Navigation() {
       {/* ---------- OVERLAY OSCURO ---------- */}
       {open && (
         <div
-          className="fixed inset-0 z-[997] bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[997] bg-gray-700 bg-opacity-50 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         ></div>
       )}
