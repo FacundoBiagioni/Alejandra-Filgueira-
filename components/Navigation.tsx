@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { NavLink } from "@/types";
@@ -19,9 +19,15 @@ export default function Navigation() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  // 🧠 Bloquea el scroll del body cuando el menú está abierto (en móviles es clave)
+  useEffect(() => {
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+  }, [open]);
+
   return (
     <>
-      {/* ---------- Desktop nav (visible en lg) ---------- */}
+      {/* ---------- Desktop nav (visible solo en pantallas grandes) ---------- */}
       <nav className="hidden lg:flex items-center gap-x-6">
         {nav.map((link) => (
           <Link
@@ -42,7 +48,7 @@ export default function Navigation() {
       <button
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
-        className="relative z-[60] flex flex-col justify-between w-6 h-4 sm:w-7 sm:h-5 lg:hidden"
+        className="relative z-[70] flex flex-col justify-between w-6 h-4 sm:w-7 sm:h-5 lg:hidden"
       >
         <motion.span
           className="block h-0.5 bg-gray-700 rounded"
@@ -67,20 +73,21 @@ export default function Navigation() {
         />
       </button>
 
-      {/* ---------- Mobile panel (desplegable desde arriba) ---------- */}
+      {/* ---------- Mobile panel (cae desde arriba) ---------- */}
       <motion.nav
         initial={{ y: "-100%" }}
         animate={{ y: open ? 0 : "-100%" }}
         transition={{ duration: 0.36, ease: "easeInOut" }}
-        className="fixed top-0 left-0 right-0 z-[55] flex flex-col items-center justify-center gap-6 bg-white py-20 shadow-lg lg:hidden"
-        // Si preferís que tenga padding distinto en móviles, lo ajustamos acá.
+        className="fixed top-0 left-0 right-0 z-[65] flex flex-col items-center justify-center gap-6 bg-white py-20 shadow-lg lg:hidden"
       >
         {nav.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             className={`text-lg font-titulo transition ${
-              pathname === link.href ? "font-semibold text-black" : "text-gray-700 hover:text-black"
+              pathname === link.href
+                ? "font-semibold text-black"
+                : "text-gray-700 hover:text-black"
             }`}
             onClick={() => setOpen(false)}
           >
@@ -89,15 +96,15 @@ export default function Navigation() {
         ))}
       </motion.nav>
 
-      {/* ---------- Overlay global (cubre toda la página y cierra el menu al clickear) ---------- */}
+      {/* ---------- Overlay (fondo oscuro clickeable, cubre toda la pantalla) ---------- */}
       {open && (
         <div
-          className="fixed inset-0 z-[50] bg-opacity-50"
+          className="fixed inset-0 z-[60] bg-black bg-opacity-40 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         />
       )}
 
-      {/* ---------- Contact button (no tocar) ---------- */}
+      {/* ---------- Botón de contacto (solo desktop) ---------- */}
       <Link
         href="/contact"
         className="font-titulo items-center hidden px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow lg:inline-flex hover:bg-gray-100"
