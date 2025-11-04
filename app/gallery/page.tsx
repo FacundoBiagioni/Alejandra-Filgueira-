@@ -109,7 +109,7 @@ export default function Gallery() {
           Galería de Obras
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Un recorrido visual por las distintas etapas creativas de Alejandra.  
+          Un recorrido visual a través de mis etapas creativas.  
           Cada obra es una fusión entre color, textura y emoción.
         </p>
       </header>

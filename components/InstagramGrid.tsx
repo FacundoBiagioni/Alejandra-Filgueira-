@@ -15,7 +15,7 @@ const InstagramGrid = () => {
           Conocé más sobre mi mundo artístico
         </h3>
 
-        <p className="text-gray-700 text-sm sm:text-base lg:w-2/3 mb-10 text-center lg:text-left">
+        <p className="text-gray-700 text-sm sm:text-base lg:w-2/3 mb-5 text-center lg:text-left">
           En este espacio comparto mi recorrido profesional y personal,
           los procesos detrás de cada obra y momentos que inspiran mi arte.
           Podés descubrir más y conectar conmigo a través de Instagram.

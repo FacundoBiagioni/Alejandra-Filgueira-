@@ -9,7 +9,7 @@ export default function ContactSection({ className }: CommonProps) {
       <div className="container mx-auto flex flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between">
         
         {/* 🔹 Texto principal */}
-        <div className="text-center lg:text-left">
+        <div className="text-center">
           <p className="text-xl sm:text-2xl text-gray-800">Tu próximo paso,</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-900">
             Un mensaje
