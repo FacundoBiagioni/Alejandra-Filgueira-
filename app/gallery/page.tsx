@@ -119,7 +119,7 @@ export default function Gallery() {
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[1/1] overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-md p-1 transition-all duration-300 hover:scale-[1.03]"
+            className="relative w-full aspect-[1/1] overflow-hidden rounded-xl bg-white p-1 transition-all duration-300 hover:scale-[1.03]"
           >
             <Image
               src={image.src}

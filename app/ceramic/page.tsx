@@ -61,7 +61,7 @@ export default function Ceramic() {
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white shadow-sm p-1 transition-all duration-300 hover:scale-[1.03] hover:shadow-md"
+            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white p-1 transition-all duration-300 hover:scale-[1.03]"
           >
             <Image
               src={image.src}
