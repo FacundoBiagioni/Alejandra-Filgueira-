@@ -80,11 +80,11 @@ export default function ContactMeMinimalEnhanced() {
           </div>
           <div className="flex items-center gap-3">
             <FaInstagram className="text-gray-500"/>
-            <a href="https://instagram.com/alejandra" target="_blank" className="hover:underline">Instagram</a>
+            <a href="https://www.instagram.com/alejandrafilgueira/" target="_blank" className="hover:underline">Instagram</a>
           </div>
           <div className="flex items-center gap-3">
             <FaLinkedin className="text-gray-500"/>
-            <a href="https://linkedin.com/in/alejandra" target="_blank" className="hover:underline">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/alejandra-filgueira-2a53512b/" target="_blank" className="hover:underline">LinkedIn</a>
           </div>
           <div className="flex items-center gap-3">
             <FaExternalLinkAlt className="text-gray-500"/>
