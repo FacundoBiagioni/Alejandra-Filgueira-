@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link"; // ✅ Importamos Link
+import Link from "next/link";
 import { TbArrowUpRight } from "react-icons/tb";
 
 export default function HeroSection() {
@@ -12,9 +12,9 @@ export default function HeroSection() {
             Empresas & Colaboraciones
           </h1>
           <p className="pb-6 text-gray-600 xl:pb-10">
-            Proyectos realizados para instituciones, marcas y empresas. <br />
-            Trabajos por encargo, intervenciones y colaboraciones que muestran la <br />
-            experiencia profesional de Alejandra con organismos y marcas.
+            Proyectos que realicé para instituciones, marcas y empresas. <br />
+            Trabajos por encargo, intervenciones y colaboraciones que reflejan mi <br />
+            experiencia profesional con distintos organismos y marcas.
           </p>
 
           {/* ✅ Botón con Link a /contacto */}
