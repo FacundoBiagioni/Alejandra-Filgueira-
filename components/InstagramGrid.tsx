@@ -52,7 +52,7 @@ const InstagramGrid = () => {
             className="bg-gradient-to-r from-gray-500 to-red-900 text-white rounded-xl p-6 flex items-center gap-4 transition-transform hover:scale-105 cursor-pointer w-full max-w-md mx-auto"
           >
             <Image
-              src="/public/image/profile.jpg"
+              src="/image/procesos/profile.jpg"
               alt="Alejandra Filgueira"
               width={64}
               height={64}

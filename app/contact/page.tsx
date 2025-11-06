@@ -59,7 +59,7 @@ export default function ContactMeMinimalEnhanced() {
         {/* Foto de perfil */}
         <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
           <Image
-            src="/image/profile.jpg"
+            src="/image/procesos/profile.jpg"
             alt="Foto de contacto"
             width={80}
             height={80}
