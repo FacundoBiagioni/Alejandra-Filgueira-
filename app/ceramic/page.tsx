@@ -1,7 +1,17 @@
-import { GalleryImage } from "@/types";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { GalleryImage } from "@/types";
 
 export default function Ceramic() {
+  // Estado para manejar la imagen seleccionada (modal)
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+  // Estado para controlar cuando la imagen del MODAL está cargando
+  const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
+
+  // Lista de imágenes
   const images: GalleryImage[] = [
     { src: "/image/ceramica/ceramica1.jpg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica2.jpg", alt: "ceramica" },
@@ -47,31 +57,92 @@ export default function Ceramic() {
 
   return (
     <section className="container py-16">
-      {/* HEADER */}
+      {/* TÍTULO */}
       <header className="text-center mb-12 px-4">
-        <h1 className="text-4xl font-semibold mb-2 text-gray-900">Colección de Cerámica</h1>
+        <h1 className="text-4xl font-semibold mb-2 text-gray-900">
+          Colección de Cerámica
+        </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Una selección artesanal de piezas únicas en cerámica.  
+          Una selección artesanal de piezas únicas en cerámica.
           Cada forma, textura y color cuenta una historia.
         </p>
       </header>
 
-      {/* GALERÍA */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
+      {/* GRID DE IMÁGENES */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full aspect-[4.3/5] overflow-hidden rounded-xl bg-white p-1 transition-all duration-300 hover:scale-[1.03]"
+            className="relative overflow-hidden cursor-pointer aspect-square group"
+            onClick={() => {
+              // Al abrir el modal activamos el loader del modal
+              setSelectedImage(image);
+              setIsImageLoading(true);
+            }}
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover rounded-lg"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ))}
       </div>
+
+      {/* MODAL */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity duration-150 p-4"
+          onClick={() => {
+            setSelectedImage(null);
+            setIsImageLoading(false); // asegurar reset al cerrar
+          }}
+        >
+          <div
+            className="relative max-w-5xl w-auto max-h-[90vh] bg-white rounded-lg overflow-hidden shadow-lg flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* PLACEHOLDER DE CARGA MODAL */}
+            {isImageLoading && (
+              <div className="flex items-center justify-center w-[80vw] max-w-4xl h-[70vh]">
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+              </div>
+            )}
+
+            {/* Imagen principal */}
+            <div
+              className={`relative w-auto h-auto max-h-[80vh] p-5 sm:p-8 flex items-center justify-center ${
+                isImageLoading ? "pointer-events-none" : ""
+              }`}
+            >
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                width={1000}
+                height={1000}
+                // ocultamos la imagen hasta que termine de cargar para evitar "saltos"
+                className={`object-contain w-auto h-auto max-w-[calc(100%-1rem)] max-h-[calc(80vh-1rem)] sm:max-w-[calc(100%-2rem)] sm:max-h-[calc(80vh-2rem)] transition-opacity duration-300 ${
+                  isImageLoading ? "opacity-0" : "opacity-100"
+                }`}
+                onLoadingComplete={() => setIsImageLoading(false)}
+              />
+            </div>
+
+            {/* Botón de cierre */}
+            <button
+              onClick={() => {
+                setSelectedImage(null);
+                setIsImageLoading(false);
+              }}
+              className="absolute top-3 right-4 sm:right-6 text-2xl sm:text-4xl text-black font-light hover:scale-110 transition-transform"
+              aria-label="Cerrar"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
