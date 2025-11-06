@@ -1,7 +1,19 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function CatalogueSection() {
+  const [isTouch, setIsTouch] = useState(false);
+  const [activeCard, setActiveCard] = useState<string | null>(null);
+
+  // Detectar si el dispositivo es táctil
+  useEffect(() => {
+    const hasTouch =
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0;
+    setIsTouch(hasTouch);
+  }, []);
+
   const items = [
     {
       id: "01",
@@ -33,40 +45,65 @@ export default function CatalogueSection() {
     },
   ];
 
+  // Manejar click/touch en una tarjeta
+  const handleCardClick = (id: string) => {
+    // Si ya está activa, la desactiva; si no, la activa
+    setActiveCard((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-2 lg:grid-cols-4">
-      {items.map((item) => (
-        <div
-          key={item.id}
-          className="relative overflow-hidden group rounded-lg shadow-md"
-        >
-          {/* Imagen */}
-          <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-gray-100 flex items-center justify-center">
-            <Image
-              src={item.image}
-              width={380}
-              height={450}
-              alt={item.title}
-              className="object-fill w-full h-full"
-            />
+      {items.map((item) => {
+        const isActive = activeCard === item.id;
 
-            {/* Overlay gris */}
-            <div className="absolute inset-0 bg-gray-500 bg-opacity-80 transition-opacity duration-500 group-hover:opacity-0"></div>
-          </div>
+        return (
+          <div
+            key={item.id}
+            className="relative overflow-hidden group rounded-lg shadow-md cursor-pointer"
+            onClick={() => isTouch && handleCardClick(item.id)} // Solo aplica click si es táctil
+          >
+            {/* Imagen */}
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-gray-100 flex items-center justify-center">
+              <Image
+                src={item.image}
+                width={380}
+                height={450}
+                alt={item.title}
+                className="object-fill w-full h-full"
+              />
 
-          {/* Tarjeta descriptiva flotante */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center bg-white bg-opacity-80 backdrop-blur rounded-lg p-6 sm:p-8 max-w-[85%] transform translate-y-0 group-hover:translate-y-96 transition-transform duration-500">
-              <p className="text-base sm:text-lg font-semibold mt-1">
-                {item.title}
-              </p>
-              <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                {item.description}
-              </p>
+              {/* Overlay gris (desaparece con hover o si está activa) */}
+              <div
+                className={`absolute inset-0 bg-gray-500 bg-opacity-80 transition-opacity duration-500 
+                  ${isTouch ? (isActive ? "opacity-0" : "opacity-80") : "group-hover:opacity-0"}
+                `}
+              ></div>
+            </div>
+
+            {/* Tarjeta descriptiva flotante */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className={`text-center bg-white bg-opacity-80 backdrop-blur rounded-lg p-6 sm:p-8 max-w-[85%] transform transition-transform duration-500 
+                  ${
+                    isTouch
+                      ? isActive
+                        ? "translate-y-96"
+                        : "translate-y-0"
+                      : "group-hover:translate-y-96"
+                  }
+                `}
+              >
+                <p className="text-base sm:text-lg font-semibold mt-1">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                  {item.description}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
