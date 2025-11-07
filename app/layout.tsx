@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import ButtonUp from "@/components/ButtonUp";
 
 export const metadata: Metadata = {
-  title: "Interior Design Portfolio",
-  description: "Portfolio showcasing interior design work",
+  title: "Alejandra Filgueira | Abstract Art",
+  description: "Portfolio de Alejandra Filgueira, artista de arte abstracto.",
+  icons: {
+    icon: "/LogoUrlcuadro7.ico",
+  },
 };
 
 interface RootLayoutProps {
