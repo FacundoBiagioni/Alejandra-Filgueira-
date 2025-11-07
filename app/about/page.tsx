@@ -1,6 +1,7 @@
 "use client";
 
 import InstagramGrid from "@/components/InstagramGrid";
+import { FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbArrowUpRight } from "react-icons/tb";
@@ -77,23 +78,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* DECLARACIÓN ARTÍSTICA */}
-      <section className="container py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
-        <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-6">
-          Declaración artística
-        </h2>
-        <p className="text-gray-700 leading-relaxed">
-          A través del arte, transmito historias donde los materiales cobran protagonismo. 
-          Utilizo pintura asfáltica, acrílicos y metalizados que se fusionan generando efectos inesperados. 
-          Mi obra nace desde la emoción y la experimentación, combinando reciclado, restauración y técnicas mixtas. 
-          Cada cuadro es una experiencia visual que muta con la luz y propone una conexión sensorial más allá de la lógica.
-        </p>
-      </section>
+{/* CURRÍCULUM VITAE - VARIANTE 2 */}
+<section className="py-20 bg-gray-50 border-t border-gray-200 text-center">
+  <h2 className="font-titulo text-3xl font-semibold mb-4">Currículum Vitae</h2>
+  <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+    Descargá mi currículum y conocé mi formación, exposiciones y proyectos artísticos.  
+    Es un resumen de mi recorrido y mi pasión por el arte.
+  </p>
+
+  <a
+    href="/pdf/CV-Alejandra.pdf"
+    download
+    className="font-titulo inline-flex items-center gap-2 px-7 py-4 text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+  >
+    <FileText className="w-8 h-8" />
+    Descargar CV
+  </a>
+</section>
+
+
 
       {/* INSTAGRAM GRID */}
       <InstagramGrid />
 
-      {/* FORMACIÓN */}
+      {/* FORMACIÓN
       <section className="container py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
         <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-8">
           Formación Artística
@@ -113,9 +121,9 @@ export default function About() {
             <li>• Cursos de cerámica — Aragón, Sunseri y Arnau (2021-2025)</li>
           </ul>
         </div>
-      </section>
+      </section>*/}
 
-      {/* EXPOSICIONES */}
+      {/* EXPOSICIONES 
       <section className="container py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
         <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-8">
           Exposiciones Destacadas
@@ -140,7 +148,8 @@ export default function About() {
             </ul>
           </div>
         </div>
-      </section>
+      </section>*/}
+       
 
       {/* COLABORACIONES / MARCAS */}
       <section className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-20 py-10 sm:py-12 md:py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
