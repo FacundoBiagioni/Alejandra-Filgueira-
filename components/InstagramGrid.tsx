@@ -67,13 +67,6 @@ const InstagramGrid = () => {
             <Instagram size={28} className="text-white" />
           </a>
         </div>
-
-        {/* =============================
-            MENSAJE FINAL - Siempre centrado y responsive
-        ============================== */}
-        <p className="my-4 w-full max-w-2xl text-xs sm:text-sm italic text-gray-500 mx-auto text-center px-2 sm:px-0">
-          Descubrí las últimas publicaciones y obras directamente desde su perfil.
-        </p>
       </div>
     </section>
   );

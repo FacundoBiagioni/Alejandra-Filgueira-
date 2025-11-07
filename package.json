@@ -10,6 +10,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "@phosphor-icons/react": "^2.1.10",
     "autoprefixer": "10.4.15",
     "emailjs-com": "^3.2.0",
     "eslint": "8.48.0",
