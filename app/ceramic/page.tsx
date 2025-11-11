@@ -37,8 +37,8 @@ export default function Ceramic() {
     { src: "/image/ceramica/ceramica31.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica32.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica33.jpeg", alt: "ceramica" },
-    { src: "/image/ceramica/ceramica41.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica42.jpeg", alt: "ceramica" },
+    { src: "/image/ceramica/ceramica53.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica7.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica8.jpeg", alt: "ceramica" },
     { src: "/image/ceramica/ceramica43.jpeg", alt: "ceramica" },
@@ -60,11 +60,10 @@ export default function Ceramic() {
       {/* TÍTULO */}
       <header className="text-center mb-12 px-4">
         <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Colección de Cerámica
+          Obra Cerámica
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Una selección artesanal de piezas únicas en cerámica.
-          Cada forma, textura y color cuenta una historia.
+          Piezas únicas artesanales.
         </p>
       </header>
 

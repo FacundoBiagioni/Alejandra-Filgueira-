@@ -3,16 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
-import { TbArrowUpRight } from "react-icons/tb";
 import { Menu } from "lucide-react";
 import { NavLink } from "@/types";
 
 const nav: NavLink[] = [
-  { href: "/", label: "BIOGRAFÍA", isActive: false },
-  { href: "/projects", label: "COLABORACIONES", isActive: false },
-  { href: "/ambient", label: "AMBIENTACIONES", isActive: false },
-  { href: "/gallery", label: "GALERÍA", isActive: false },
-  { href: "/ceramic", label: "CERÁMICA", isActive: false },
+  { href: "/", label: "BIO", isActive: false },
+  { href: "/projects", label: "COLLABS", isActive: false },
+  { href: "/ambient", label: "ART & SPACE", isActive: false },
+  { href: "/gallery", label: "GALLERY", isActive: false },
+  { href: "/ceramic", label: "CERAMICS", isActive: false },
 ];
 
 export default function Navigation() {
@@ -46,24 +45,45 @@ export default function Navigation() {
 
   return (
     <>
-      {/* NAV DESKTOP */}
-      <nav className="hidden lg:flex items-center gap-x-6">
-        {nav.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`text-sm font-titulo transition ${
-              pathname === link.href
-                ? "font-semibold text-black"
-                : "text-gray-700 hover:text-black"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+{/* NAV DESKTOP */}
+<nav
+  className="
+    hidden lg:flex
+    absolute left-[56%] -translate-x-1/2
+    items-center justify-center
+    gap-x-6 xl:gap-x-7
+    whitespace-nowrap
+    transition-all duration-300
+  "
+>
+  {nav.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className={`text-sm font-titulo tracking-wide transition-all duration-200 ${
+        pathname === link.href
+          ? "font-semibold text-black"
+          : "text-gray-700 hover:text-black"
+      }`}
+    >
+      {link.label}
+    </Link>
+  ))}
 
-      {/* BOTÓN HAMBURGUESA (mobile) - desaparece cuando el menú está abierto */}
+  <Link
+    href="/contact"
+    className={`text-sm font-titulo tracking-wide transition-all duration-200 ${
+      pathname === "/contact"
+        ? "font-semibold text-black"
+        : "text-gray-700 hover:text-black"
+    }`}
+  >
+    CONTACT ME
+  </Link>
+</nav>
+
+
+      {/* BOTÓN HAMBURGUESA (mobile) */}
       {!open && (
         <Link
           href="#"
@@ -95,8 +115,7 @@ export default function Navigation() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* LINKS DE NAVEGACIÓN */}
-        {nav.map((link) => (
+        {[...nav, { href: "/contact", label: "CONTACT ME" }].map((link) => (
           <Link
             key={link.href}
             href={link.href}
@@ -110,24 +129,7 @@ export default function Navigation() {
             {link.label}
           </Link>
         ))}
-
-        {/* BOTÓN CONTÁCTAME (ahora también en mobile) */}
-        <Link
-          href="/contact"
-          onClick={() => setOpen(false)}
-          className="mt-6 font-titulo flex items-center justify-center px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow hover:bg-gray-100 transition"
-        >
-          Contáctame <TbArrowUpRight className="w-5 h-5 ml-2" />
-        </Link>
       </nav>
-
-      {/* BOTÓN CONTÁCTAME (desktop) */}
-      <Link
-        href="/contact"
-        className="font-titulo items-center hidden px-5 py-2 font-medium text-gray-800 bg-white border border-gray-600 rounded-full shadow lg:inline-flex hover:bg-gray-100 transition"
-      >
-        Contáctame <TbArrowUpRight className="w-5 h-5 ml-2" />
-      </Link>
     </>
   );
 }

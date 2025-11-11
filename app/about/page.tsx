@@ -160,19 +160,19 @@ export default function About() {
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 sm:gap-10 md:gap-12">
           <div className="w-full lg:w-3/4 -translate-y-2">
             <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-6">
-              Colaboraciones y Participaciones
+              Obras colaborativas
             </h2>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              A lo largo de mi trayectoria, he colaborado con instituciones, fundaciones y marcas de gran reconocimiento, como la Fundación Avon Argentina, Century 21 y el Hotel Hilton de Puerto Madero.  
-              Mi trabajo ha estado presente en exposiciones vinculadas a causas sociales, empresariales y culturales, donde el arte se convierte en un puente de comunicación.
+              He colaborado con instituciones y empresas como Fundación Avon, Century 21 y Vonharv, tejiendo el arte en espacios de diágolo y transformación.
+              A través de talleres y seminarios, invito a otros a despertar la creatividad, a redescubrir el lenguaje de la intuición y el silencioso coraje de la expresión.
             </p>
 
             <Link
               href="/projects"
               className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
             >
-              Ver proyectos completos
+              Ver proyectos
               <TbArrowUpRight className="w-5 h-5" />
             </Link>
           </div>
@@ -189,18 +189,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* TALLER / PROCESO */}
-      <section className="container py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
-        <div className="lg:flex items-center gap-12">
-          <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[400px]">
-            <Image
-              src="/image/procesos/proceso12.jpeg"
-              alt="Taller y proceso"
-              width={700}
-              height={500}
-              className="rounded-lg object-cover w-full h-auto shadow-md"
-            />
-          </div>
+{/* TALLER / PROCESO */}
+<section className="container py-16 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
+  <div className="lg:flex items-center gap-12">
+    {/* Contenedor de la imagen */}
+    <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
+      <Image
+        src="/image/procesos/proceso12.jpeg"
+        alt="Taller y proceso"
+        width={700}
+        height={500}
+        // 🔽 Cambié 'object-contain' por 'object-cover'
+        // 🔽 y agregué 'object-[center_30%]' para mover el recorte hacia abajo
+        className="rounded-lg object-cover object-[center_50%] w-full h-full shadow-md"
+      />
+    </div>
+
+
+
 
           <div className="lg:w-1/2 space-y-4 text-gray-700">
             <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-6">
@@ -224,21 +230,21 @@ export default function About() {
         <div className="lg:flex items-center gap-12">
           <div className="lg:w-1/2 mb-8 lg:mb-0 space-y-4 text-gray-700 text-left">
             <h2 className="font-titulo text-2xl sm:text-3xl font-semibold mb-4">
-              Cerámica y Creatividad
+              Cerámica
             </h2>
             <p>
-              Además de la pintura y el arte abstracto, exploro el mundo de la cerámica, creando piezas únicas y llenas de detalle. 
-              Mis tazas, platos y cuadros con elementos cerámicos combinan funcionalidad y expresión artística.
+              Junto a la pintura y la abstracción, exploro la cerámica como un territorio de tranformación, donde la tierra, el fuego y el tacto convergen.
             </p>
             <p>
-              Cada pieza refleja dedicación, paciencia y amor por el material, convirtiendo la cerámica en un lenguaje propio.
+              Cada pieza porta su propia voz, su propio pulso, integrándose al lenguaje más amplio de mi obra. En la arcilla encuentro tanto la permanencia como la fragilidad,
+              la belleza de lo que perdura y la poesía de lo que se quiebra.
             </p>
 
             <Link
               href="/ceramic"
               className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
             >
-              Ver más sobre cerámica
+              Ver más
               <TbArrowUpRight className="w-5 h-5" />
             </Link>
           </div>

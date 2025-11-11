@@ -1,20 +1,14 @@
 "use client";
-import { TbArrowUpRight } from "react-icons/tb";
 import { CommonProps } from "@/types";
 import Link from "next/link";
 
 export default function ContactSection({ className }: CommonProps) {
   return (
-    <section className={`bg-zinc-100 py-16 px-6 sm:px-10 lg:px-20 ${className || ""}`}>
-      <div className="container mx-auto flex flex-col items-center justify-center gap-10 lg:flex-row lg:justify-between">
+    <section className={`bg-zinc-100 py-12 px-6 sm:px-10 lg:px-20 ${className || ""}`}>
+      <div className="container mx-auto flex flex-col items-center justify-center gap-6">
         
-        {/* 🔹 Texto principal */}
-        <div className="text-center">
-          <p className="text-xl sm:text-2xl text-gray-800">Tu próximo paso,</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-900">
-            Un mensaje
-          </h1>
-        </div>
+        {/* 🔹 Título sutil */}
+        <p className="text-gray-600 text-base sm:text-lg">Conectemos</p>
 
         {/* 🔹 Íconos de redes sociales */}
         <ul className="flex justify-center items-center gap-5 sm:gap-6 flex-wrap">
@@ -26,8 +20,7 @@ export default function ContactSection({ className }: CommonProps) {
               rel="noopener noreferrer"
               className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              {/* Tooltip */}
-              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              <span className="absolute left-1/2 -translate-x-1/2 -top-10 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 Instagram
               </span>
               <svg
@@ -49,7 +42,7 @@ export default function ContactSection({ className }: CommonProps) {
               rel="noopener noreferrer"
               className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              <span className="absolute left-1/2 -translate-x-1/2 -top-10 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 LinkedIn
               </span>
               <svg
@@ -71,7 +64,7 @@ export default function ContactSection({ className }: CommonProps) {
               rel="noopener noreferrer"
               className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
-              <span className="absolute left-1/2 -translate-x-1/2 -top-11 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+              <span className="absolute left-1/2 -translate-x-1/2 -top-10 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
                 Facebook
               </span>
               <svg
@@ -84,16 +77,33 @@ export default function ContactSection({ className }: CommonProps) {
               </svg>
             </a>
           </li>
-        </ul>
 
-        {/* 🔹 Botón de contacto */}
-        <Link
-          href="/contact"
-          className="font-titulo inline-flex items-center gap-1 px-7 py-3 text-sm sm:text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
-        >
-          Contáctame
-          <TbArrowUpRight className="text-lg sm:text-xl" />
-        </Link>
+          {/* ✉️ Mail (nuevo) */}
+          <li>
+            <Link
+              href="/contact"
+              className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
+            >
+              <span className="absolute left-1/2 -translate-x-1/2 -top-10 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
+                Mail
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                className="w-7 h-7 text-gray-800"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 7.5l9 6 9-6M4.5 6h15a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 16.5v-9A1.5 1.5 0 0 1 4.5 6z"
+                />
+              </svg>
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );
