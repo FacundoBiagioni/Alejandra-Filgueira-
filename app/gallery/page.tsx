@@ -114,7 +114,7 @@ export default function Gallery() {
       {/* TÍTULO */}
       <header className="text-center mb-12 px-4">
         <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Galería de Obras
+          Obras
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
           Un recorrido visual a través de mis etapas creativas.

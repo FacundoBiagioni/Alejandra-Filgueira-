@@ -68,11 +68,11 @@ export default function Ambient() {
       {/* TÍTULO */}
       <header className="text-center mb-12 px-4">
         <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Ambientaciones
+          Arte y Espacio
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Inspiraciones para espacios donde el arte y la decoración se integran.  
-          Cada ambiente refleja una atmósfera única creada a partir de las obras.
+          Vinculos creativos con estudios de arquitectura y diseño interior
+          para generar ambientaciones únicas donde el arte dialoga con el entorno.
         </p>
       </header>
 
