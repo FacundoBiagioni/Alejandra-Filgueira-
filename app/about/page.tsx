@@ -10,39 +10,43 @@ export default function About() {
   return (
     <div className="bg-white text-gray-800">
 
-      {/* HERO */}
-      <section
-        className="relative w-full h-[75vh] bg-center bg-no-repeat flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: "url('/image/procesos/proceso9.jpeg')",
-          backgroundSize: "cover",
-          imageRendering: "auto",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/55"></div>
+{/* HERO */}
+<section
+  className="relative w-full h-[75vh] bg-center bg-no-repeat flex items-center justify-center overflow-hidden"
+  style={{
+    backgroundImage: "url('/image/procesos/proceso9.jpeg')",
+    backgroundSize: "cover",
+    imageRendering: "auto",
+  }}
+>
+  {/* Capa oscura sobre la imagen */}
+  <div className="absolute inset-0 bg-black/55"></div>
 
-        <div className="relative z-4 animate-fadeInScale">
-          <div className="relative inline-block">
-            <Image
-              src="/logo.png"
-              alt="Borde del logo"
-              width={600}
-              height={600}
-              className="absolute top-[2px] left-[2px] opacity-70"
-              style={{ filter: 'brightness(0) invert(1)' }}
-              priority
-            />
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={480}
-              height={480}
-              className="relative z-10 object-contain"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+  <div className="relative z-4 animate-fadeInScale">
+    <div className="relative inline-block">
+      {/* ✅ Fondo blanco translúcido más pequeño, proporcional al logo */}
+      <div
+        className="
+          absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+          bg-white/50
+          w-[420px] h-[230px] md:w-[450px] md:h-[250px]
+        "
+      ></div>
+
+      {/* Logo principal (mantiene su tamaño original) */}
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={480}
+        height={480}
+        className="relative z-10 object-contain"
+        priority
+      />
+    </div>
+  </div>
+</section>
+
+
 
       {/* BIO */}
       <section className="container py-20 border-t border-gray-200 text-base sm:text-base md:text-lg lg:text-lg">
