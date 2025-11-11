@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { NavLink } from "@/types";
 
 const nav: NavLink[] = [
@@ -63,19 +63,21 @@ export default function Navigation() {
         ))}
       </nav>
 
-      {/* BOTÓN HAMBURGUESA (mobile) AHORA LINK */}
-      <Link
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          setOpen((s) => !s);
-        }}
-        aria-label="Toggle menu"
-        aria-expanded={open}
-        className="relative z-[80] flex items-center justify-center w-8 h-8 lg:hidden text-gray-800"
-      >
-        {open ? <X size={28} /> : <Menu size={28} />}
-      </Link>
+      {/* BOTÓN HAMBURGUESA (mobile) - desaparece cuando el menú está abierto */}
+      {!open && (
+        <Link
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setOpen(true);
+          }}
+          aria-label="Abrir menú"
+          aria-expanded={open}
+          className="relative z-[80] flex items-center justify-center w-8 h-8 lg:hidden text-gray-800"
+        >
+          <Menu size={28} />
+        </Link>
+      )}
 
       {/* OVERLAY */}
       <div
