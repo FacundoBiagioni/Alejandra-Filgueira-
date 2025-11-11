@@ -24,16 +24,17 @@ export default function About() {
 
   <div className="relative z-4 animate-fadeInScale">
     <div className="relative inline-block">
-      {/* ✅ Fondo blanco translúcido más pequeño, proporcional al logo */}
+      {/* ✅ Fondo blanco translúcido detrás del logo */}
       <div
         className="
           absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           bg-white/50
-          w-[420px] h-[230px] md:w-[450px] md:h-[250px]
+          w-[420px] h-[230px] md:w-[440px] md:h-[250px]
+          max-w-[90vw]
         "
       ></div>
 
-      {/* Logo principal (mantiene su tamaño original) */}
+      {/* Logo principal (sin modificaciones) */}
       <Image
         src="/logo.png"
         alt="Logo"
@@ -45,7 +46,6 @@ export default function About() {
     </div>
   </div>
 </section>
-
 
 
       {/* BIO */}
