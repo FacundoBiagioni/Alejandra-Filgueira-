@@ -1,12 +1,14 @@
 "use client";
 
 import InstagramGrid from "@/components/InstagramGrid";
-import { FileText } from "lucide-react";
+import { ChevronDown, FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
 
 export default function About() {
+    const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-white text-gray-800">
 
@@ -82,23 +84,71 @@ export default function About() {
         </div>
       </section>
 
-{/* CURRÍCULUM VITAE - VARIANTE 2 */}
-<section className="py-20 bg-gray-50 border-t border-gray-200 text-center">
-  <h2 className="font-titulo text-3xl font-semibold mb-4">Currículum Vitae</h2>
-  <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-    Descargá mi currículum y conocé mi formación, exposiciones y proyectos artísticos.  
-    Es un resumen de mi recorrido y mi pasión por el arte.
-  </p>
+      {/* CURRÍCULUM VITAE - VARIANTE 2 */}
+    <section className="py-20  border-t border-gray-200 text-center relative">
+      <h2 className="font-titulo text-3xl font-semibold mb-4">Currículum Vitae</h2>
+      <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+        Descargá mi currículum y conocé mi formación, exposiciones y proyectos artísticos.  
+        Es un resumen de mi recorrido y mi pasión por el arte.
+      </p>
 
-  <a
-    href="/pdf/CV-Alejandra.pdf"
-    download
-    className="font-titulo inline-flex items-center gap-2 px-7 py-4 text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
-  >
-    <FileText className="w-8 h-8" />
-    Descargar CV
-  </a>
-</section>
+      {/* Botón principal */}
+      <div className="relative inline-block">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="font-titulo inline-flex items-center gap-2 px-7 py-4 text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+        >
+          <FileText className="w-8 h-8" />
+          Descargar CV
+          <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        </button>
+
+        {/* ▼ Menú desplegable (estilo se define por variante) */}
+        {isOpen && (
+          <div className="absolute left-1/2 -translate-x-1/2 mt-3 z-20">
+    <div className="bg-gray-100 rounded-xl shadow-lg p-4 w-60">
+      <style jsx>{`
+        .link-hover {
+          position: relative;
+          display: inline-block;
+        }
+        .link-hover::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background: black;
+          transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+          width: 100%;
+        }
+      `}</style>
+
+      <a
+        href="/pdf/CV_Alejandra_ES.pdf"
+        download
+        className="block py-2 text-gray-800 hover:text-black font-medium transition link-hover"
+      >
+        Descargar en Español (ᴇs)
+      </a>
+      <a
+        href="/pdf/CV_Alejandra_EN.pdf"
+        download
+        className="block py-2 text-gray-800 hover:text-black font-medium transition link-hover"
+      >
+        Descargar en Inglés (ᴇɴ)
+      </a>
+    </div>
+
+
+
+          </div>
+        )}
+      </div>
+    </section>
 
 
 
