@@ -1,69 +1,61 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { MousePointerClick } from "lucide-react"; // 👈 icono
+import { MousePointerClick } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-export default function CatalogueSection() {
+export default function CardsExpos() {
+  const t = useTranslations("CardsExpos"); // ✅ Namespace
+
   const [isTouch, setIsTouch] = useState(false);
   const [activeCard, setActiveCard] = useState<string | null>(null);
 
-  // Detectar si el dispositivo es táctil
   useEffect(() => {
-    const hasTouch =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0;
+    const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     setIsTouch(hasTouch);
   }, []);
 
   const items = [
     {
       id: "01",
-      title: "Museo Municipal de Arte MUMART",
+      title: t("item1.title"),
       image: "/image/exposiciones/expo30.jpeg",
-      description:
-        "Exposición individual “Cicatrices” (2025). Reflexión sobre huellas, memoria y reconstrucción a través de la materia.",
+      description: t("item1.description"),
     },
     {
       id: "02",
-      title: "FusiónARTE — City Bell",
+      title: t("item2.title"),
       image: "/image/exposiciones/expo27.jpeg",
-      description:
-        "Muestra curada por Sebastián Guerrini (2025). Obras en diálogo con la noción de reinvención y transformación artística.",
+      description: t("item2.description"),
     },
     {
       id: "03",
-      title: "Artweek Chile",
+      title: t("item3.title"),
       image: "/image/exposiciones/expo33(recortada).jpg",
-      description:
-        "Participación internacional en Santiago de Chile (2021-2022). Stand individual con obras abstractas de gran formato.",
+      description: t("item3.description"),
     },
     {
       id: "04",
-      title: "Art & Deco — Palermo",
+      title: t("item4.title"),
       image: "/image/exposiciones/expo1.jpeg",
-      description:
-        "Muestra individual (2023). Obras presentadas en Art & Deco, un espacio de diseño y arte en Palermo Soho.",
+      description: t("item4.description"),
     },
   ];
 
-  // Manejar click/touch en una tarjeta
   const handleCardClick = (id: string) => {
     setActiveCard((prev) => (prev === id ? null : id));
   };
 
   return (
     <div className="relative flex flex-col items-end">
-      {/* 🖱️ ÍCONO indicativo justo ARRIBA del grid */}
       <div className="mb-2 sm:mb-4 mr-2 sm:mr-4 hover:opacity-80 transition-opacity">
         <MousePointerClick
           size={22}
           className="text-gray-600"
           style={{ transform: "rotate(260deg)" }}
         />
-
       </div>
 
-      {/* 🔳 GRID PRINCIPAL */}
       <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-2 lg:grid-cols-4 w-full">
         {items.map((item) => {
           const isActive = activeCard === item.id;
@@ -74,7 +66,6 @@ export default function CatalogueSection() {
               className="relative overflow-hidden group rounded-lg shadow-md cursor-pointer"
               onClick={() => isTouch && handleCardClick(item.id)}
             >
-              {/* Imagen */}
               <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-gray-100 flex items-center justify-center">
                 <Image
                   src={item.image}
@@ -83,8 +74,6 @@ export default function CatalogueSection() {
                   alt={item.title}
                   className="object-fill w-full h-full"
                 />
-
-                {/* Overlay gris */}
                 <div
                   className={`absolute inset-0 bg-gray-500 bg-opacity-80 transition-opacity duration-500 
                     ${isTouch ? (isActive ? "opacity-0" : "opacity-80") : "group-hover:opacity-0"}
@@ -92,7 +81,6 @@ export default function CatalogueSection() {
                 ></div>
               </div>
 
-              {/* Tarjeta descriptiva */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div
                   className={`text-center bg-white bg-opacity-80 backdrop-blur rounded-lg p-6 sm:p-8 max-w-[85%] transform transition-transform duration-500 

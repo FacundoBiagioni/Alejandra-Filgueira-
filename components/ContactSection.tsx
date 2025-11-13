@@ -1,14 +1,19 @@
 "use client";
 import { CommonProps } from "@/types";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function ContactSection({ className }: CommonProps) {
+  const t = useTranslations("ContactSection"); // ✅ Namespace: ContactSection
+
   return (
     <section className={`bg-zinc-100 py-12 px-6 sm:px-10 lg:px-20 ${className || ""}`}>
       <div className="container mx-auto flex flex-col items-center justify-center gap-6">
         
         {/* 🔹 Título sutil */}
-        <p className="text-gray-600 text-base sm:text-lg">Conectemos</p>
+        <p className="text-gray-600 text-base sm:text-lg">
+          {t("connect")} {/* 🔹 Traducción */}
+        </p>
 
         {/* 🔹 Íconos de redes sociales */}
         <ul className="flex justify-center items-center gap-5 sm:gap-6 flex-wrap">

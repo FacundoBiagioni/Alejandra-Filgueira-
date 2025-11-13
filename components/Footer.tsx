@@ -1,6 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import ContactSection from "./ContactSection";
 
 export default function Footer() {
+  const t = useTranslations("Footer"); // ✅ Namespace: Footer
+
   return (
     <div className="bg-zinc-100">
       {/* 🔹 Sección de contacto */}
@@ -15,7 +20,7 @@ export default function Footer() {
       <footer className="py-10 text-center text-gray-500 text-sm sm:text-base">
         <div className="container mx-auto px-6 sm:px-10 lg:px-20">
           <p className="leading-relaxed">
-            &copy; 2025 Alejandra Filgueira — Todos los derechos reservados
+            {t("copyright")}
           </p>
         </div>
       </footer>
