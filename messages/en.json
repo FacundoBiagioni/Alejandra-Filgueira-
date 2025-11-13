@@ -1,0 +1,53 @@
+{
+  "Navigation": {
+    "bio": "Bio",
+    "projects": "Collaborations",
+    "ambient": "Art & Spaces",
+    "gallery": "Gallery",
+    "ceramic": "Ceramics",
+    "contact": "Contact",
+    "openMenu": "Open menu"
+  },
+    "InstagramGrid": {
+    "title": "Discover more about my artistic world",
+    "description": "In this space, I share my professional and personal journey, the processes behind each artwork, and moments that inspire my art. You can discover more and connect with me through Instagram.",
+    "profileName": "@Alejandra Filgueira",
+    "profileDescription": "Follow her art, processes, and posts on Instagram."
+  },
+    "HeroSection": {
+    "title": "Companies & Collaborations",
+    "description": "Projects I carried out for institutions, brands, and companies. Commissioned works, interventions, and collaborations that reflect my professional experience with various organizations and brands.",
+    "button": "Contact for project"
+  },
+    "Footer": {
+    "copyright": "© 2025 Alejandra Filgueira — All rights reserved"
+  },
+    "ContactSection": {
+    "connect": "Let's connect"
+  },
+    "CarruselExpos": {
+    "title": "Exhibitions and Appearances",
+    "paragraph1": "Throughout my career, I have had the opportunity to showcase my work in various exhibitions and art fairs, sharing spaces with other artists and connecting with diverse audiences.",
+    "paragraph2": "This selection gathers other notable exhibitions, complementing the institutional collaborations and individual projects I have already presented. Each showcase reflects important moments of my career and artistic evolution.",
+    "expoAlt": "Exhibition"
+  },
+    "CardsExpos": {
+    "item1": {
+      "title": "Municipal Museum of Art MUMART",
+      "description": "Solo exhibition “Cicatrices” (2025). Reflection on traces, memory, and reconstruction through material."
+    },
+    "item2": {
+      "title": "FusiónARTE — City Bell",
+      "description": "Curated by Sebastián Guerrini (2025). Works in dialogue with the notion of reinvention and artistic transformation."
+    },
+    "item3": {
+      "title": "Artweek Chile",
+      "description": "International participation in Santiago de Chile (2021-2022). Solo stand with large-format abstract works."
+    },
+    "item4": {
+      "title": "Art & Deco — Palermo",
+      "description": "Solo exhibition (2023). Works presented at Art & Deco, a design and art space in Palermo Soho."
+    }
+  }
+
+}

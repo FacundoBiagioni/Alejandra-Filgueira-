@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+// next.config.js
+const createNextIntlPlugin = require("next-intl/plugin");
+
+const withNextIntl = createNextIntlPlugin("./next-intl.config.ts");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // swcMinify: true //se puede eliminar porque ya es true por defecto
-}
+};
 
-module.exports = nextConfig
+module.exports = withNextIntl(nextConfig);

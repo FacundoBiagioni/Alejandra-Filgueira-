@@ -3,22 +3,23 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
+import { useTranslations } from "next-intl";
+
 
 const InstagramGrid = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [iframeHeight] = useState(100);
+  const t = useTranslations("InstagramGrid");
 
   return (
     <section className="border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-8 md:px-14 lg:px-20 py-10 sm:py-12 md:py-16">
         <h3 className="font-titulo text-2xl sm:text-3xl font-semibold mb-3 text-center lg:text-left">
-          Conocé más sobre mi mundo artístico
+          {t("title")}
         </h3>
 
         <p className="text-gray-700 text-sm sm:text-base lg:w-2/3 mb-5 text-center lg:text-left">
-          En este espacio comparto mi recorrido profesional y personal,
-          los procesos detrás de cada obra y momentos que inspiran mi arte.
-          Podés descubrir más y conectar conmigo a través de Instagram.
+          {t("description")}
         </p>
 
         {/* =============================
@@ -61,7 +62,7 @@ const InstagramGrid = () => {
             <div className="flex-1">
               <h3 className="font-semibold text-lg">@Alejandra Filgueira</h3>
               <p className="text-sm opacity-90">
-                Seguí su arte, procesos y publicaciones en Instagram.
+                {t("profileDescription")}
               </p>
             </div>
             <Instagram size={28} className="text-white" />

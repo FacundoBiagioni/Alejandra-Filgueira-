@@ -1,26 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TbArrowUpRight } from "react-icons/tb";
+import { useTranslations } from "next-intl";
+
 
 export default function HeroSection() {
+  const t = useTranslations("HeroSection");
+
   return (
     <div className="bg-opacity-60 bg-zinc-100 overflow-hidden relative">
       {/* Fondo un poco más alto: py-16 en lugar de py-12 */}
       <div className="container py-20 px-10 text-center lg:py-14 lg:text-left lg:flex lg:justify-between">
         <div className="lg:w-1/2 xl:py-20 lg:py-12">
           <h1 className="font-titulo py-4 text-3xl font-extrabold leading-tight text-gray-800 xl:text-6xl lg:text-4xl">
-            Empresas & Colaboraciones
+            {t("title")}
           </h1>
           <p className="pb-6 text-gray-600 xl:pb-10">
-            Proyectos que realicé para instituciones, marcas y empresas. <br />
-            Trabajos por encargo, intervenciones y colaboraciones que reflejan mi <br />
-            experiencia profesional con distintos organismos y marcas.
+            {t("description")}
           </p>
 
           {/* ✅ Botón con Link a /contacto */}
           <Link href="/contact">
             <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg transition-all bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
-              Contactar para proyecto <TbArrowUpRight className="w-5 h-5 ml-2" />
+              {t("button")} <TbArrowUpRight className="w-5 h-5 ml-2" />
             </button>
           </Link>
         </div>

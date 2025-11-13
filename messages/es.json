@@ -1,0 +1,52 @@
+{
+  "Navigation": {
+    "bio": "Bio",
+    "projects": "Colaboraciones",
+    "ambient": "Arte y espacios",
+    "gallery": "Galería",
+    "ceramic": "Cerámica",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú"
+  },
+    "InstagramGrid": {
+    "title": "Conocé más sobre mi mundo artístico",
+    "description": "En este espacio comparto mi recorrido profesional y personal, los procesos detrás de cada obra y momentos que inspiran mi arte. Podés descubrir más y conectar conmigo a través de Instagram.",
+    "profileName": "@Alejandra Filgueira",
+    "profileDescription": "Seguí su arte, procesos y publicaciones en Instagram."
+  },
+    "HeroSection": {
+    "title": "Empresas & Colaboraciones",
+    "description": "Proyectos que realicé para instituciones, marcas y empresas. Trabajos por encargo, intervenciones y colaboraciones que reflejan mi experiencia profesional con distintos organismos y marcas.",
+    "button": "Contactar para proyecto"
+  },
+    "Footer": {
+    "copyright": "© 2025 Alejandra Filgueira — Todos los derechos reservados"
+  },
+    "ContactSection": {
+    "connect": "Conectemos"
+  },
+    "CarruselExpos": {
+    "title": "Exposiciones y Apariciones",
+    "paragraph1": "A lo largo de mi carrera, he tenido la oportunidad de mostrar mi obra en diversas exposiciones y ferias de arte, compartiendo espacios con otros artistas y conectando con públicos variados.",
+    "paragraph2": "Esta selección reúne otras exposiciones destacadas, complementando las colaboraciones institucionales y proyectos individuales que ya presenté. Cada muestra refleja momentos importantes de mi trayectoria y mi evolución artística.",
+    "expoAlt": "Exposición"
+  },
+    "CardsExpos": {
+    "item1": {
+      "title": "Museo Municipal de Arte MUMART",
+      "description": "Exposición individual “Cicatrices” (2025). Reflexión sobre huellas, memoria y reconstrucción a través de la materia."
+    },
+    "item2": {
+      "title": "FusiónARTE — City Bell",
+      "description": "Muestra curada por Sebastián Guerrini (2025). Obras en diálogo con la noción de reinvención y transformación artística."
+    },
+    "item3": {
+      "title": "Artweek Chile",
+      "description": "Participación internacional en Santiago de Chile (2021-2022). Stand individual con obras abstractas de gran formato."
+    },
+    "item4": {
+      "title": "Art & Deco — Palermo",
+      "description": "Muestra individual (2023). Obras presentadas en Art & Deco, un espacio de diseño y arte en Palermo Soho."
+    }
+  }
+}
