@@ -3,12 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { GalleryImage } from "@/types";
+import { useTranslations } from "next-intl";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-
-  // Estado para controlar la carga de la imagen del modal
   const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
+  const t = useTranslations("Gallery");
 
   const images: GalleryImage[] = [
     { src: "/image/cuadros/cuadro3.jpg", alt: "cuadro" },
@@ -112,14 +112,15 @@ export default function Gallery() {
   return (
     <section className="container py-16">
       {/* TÍTULO */}
-      <header className="text-center mb-12 px-4">
-        <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Obras
-        </h1>
-        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Un recorrido visual a través de mis etapas creativas.
-        </p>
-      </header>
+    <header className="text-center mb-12 px-4">
+      <h1 className="text-4xl font-semibold mb-2 text-gray-900">
+        {t("title")}
+      </h1>
+
+      <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
+        {t("subtitle")}
+      </p>
+    </header>
 
       {/* GRID */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

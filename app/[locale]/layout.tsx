@@ -27,24 +27,19 @@ export const metadata: Metadata = {
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params;
 
-  // ✅ Verifica si el locale es válido
-  const isLocale = (l: string): l is Locale => (locales as readonly string[]).includes(l);
+  const isLocale = (l: string): l is Locale =>
+    locales.includes(l as Locale);
+
   if (!isLocale(locale)) return notFound();
 
-  // ✅ Carga mensajes traducidos para este idioma
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
-      <body className="font-texto relative">
-        {/* 🌍 Proveedor de traducciones global */}
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <ButtonUp />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+      <ButtonUp />
+    </NextIntlClientProvider>
   );
 }

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { GalleryImage } from "@/types";
+import { useTranslations } from "next-intl";
 
 export default function Ceramic() {
   // Estado para manejar la imagen seleccionada (modal)
@@ -10,6 +11,8 @@ export default function Ceramic() {
 
   // Estado para controlar cuando la imagen del MODAL está cargando
   const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
+
+  const t = useTranslations("Ceramics");
 
   // Lista de imágenes
   const images: GalleryImage[] = [
@@ -58,12 +61,12 @@ export default function Ceramic() {
   return (
     <section className="container py-16">
       {/* TÍTULO */}
-      <header className="text-center mb-12 px-4">
+     <header className="text-center mb-12 px-4">
         <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Obra Cerámica
+          {t("title")}
         </h1>
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Piezas únicas artesanales.
+          {t("subtitle")}
         </p>
       </header>
 
