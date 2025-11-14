@@ -48,6 +48,83 @@
       "title": "Art & Deco — Palermo",
       "description": "Solo exhibition (2023). Works presented at Art & Deco, a design and art space in Palermo Soho."
     }
-  }
-
+  },
+    "Contact": {
+    "profileAlt": "Contact profile picture",
+    "contactInfo": "Contact information",
+    "contactMe": "Contact me",
+    "contactDescription": "If you want to make an inquiry or request a piece of work, fill out the form and we will get back to you as soon as possible.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send message",
+    "sending": "Sending...",
+    "success": "✅ Message sent successfully!"
+  },
+    "Ceramics": {
+    "title": "Ceramic Art",
+    "subtitle": "Unique handcrafted pieces."
+  },
+    "Gallery": {
+    "title": "Artworks",
+    "subtitle": "A visual journey through my creative stages."
+  },
+    "Projects": {
+    "collabsTitle": "Institutional collaborations and projects",
+    "collabsText": "I have worked with various institutions, galleries and private spaces...",
+    "featuredCollab": "Featured collaboration",
+    "featuredText": "In 2023, I was invited by Century 21 to develop exclusive pieces...",
+    "feature1": "Design of artworks adapted to the architecture of the space.",
+    "feature2": "Collaboration with brand design and communication teams.",
+    "feature3": "Integration of contemporary art into corporate environments.",
+    "featuredQuote": "\"Each piece was conceived as a bridge between artistic emotion and corporate visual narrative.\"",
+    "inviteTitle": "Discover my most outstanding room settings",
+    "inviteText": "Explore how the artworks transform each space...",
+    "inviteButton": "See room settings"
+  },
+    "About": {
+      "Ceramic": {
+        "title": "Ceramics",
+        "p1": "Alongside painting and abstraction, I explore ceramics as a territory of transformation, where earth, fire, and touch converge.",
+        "p2": "Each piece carries its own voice and pulse, integrating into the broader language of my work. In clay I find both permanence and fragility — the beauty of what endures and the poetry of what breaks.",
+        "button": "See more",
+        "alt1": "Ceramics process",
+        "alt2": "Finished piece"
+    },
+      "Gallery": {
+        "title": "Explore my pictorial universe",
+        "p": "Each artwork is an invitation to pause, observe, and be carried away by color, material, and emotion. Enter the gallery and discover the original paintings behind each project.",
+        "button": "See artwork gallery",
+        "alt": "See artwork gallery"
+    },
+      "collab": {
+        "title": "Collaborative Works",
+        "description": "I have collaborated with institutions and companies such as Fundación Avon, Century 21, and Vonharv, weaving art into spaces of dialogue and transformation. Through workshops and seminars, I invite others to awaken creativity, rediscover the language of intuition, and embrace the quiet courage of expression.",
+        "button": "View projects",
+        "imageAlt": "Workshop"
+    },
+      "workshop": {
+        "title": "Workshop and Creative Process",
+        "p1": "In my studio located in City Bell, I work surrounded by diverse materials—papers, fabrics, and pigments. My process begins with observing the environment and continues through constant experimentation. Each piece emerges from the dialogue between intuition and technique, where matter gains a life of its own.",
+        "p2": "Through recycling and reusing materials, I transform objects and supports into works filled with visual energy. Transparency, layering, and texture are constant elements in my aesthetic research.",
+        "imageAlt": "Workshop and creative process"
+    },
+      "cv": {
+        "title": "Curriculum Vitae",
+        "description": "Download my CV to learn about my training, exhibitions, and artistic projects. It is a summary of my journey and passion for art.",
+        "button": "Download CV",
+        "downloadEs": "Download in Spanish (es)",
+        "downloadEn": "Download in English (en)"
+    },
+    "portraitAlt": "Portrait",
+    "subtitle": "Visual artist and designer",
+    "title": "About me",
+    "paragraph1": "I was born in La Plata, Argentina, and I specialize in abstract art. I graduated as a Visual Communication Designer from the Faculty of Fine Arts at the National University of La Plata. I also completed part of my secondary studies in Germany, where my connection with art began. Since 1998, I have continued my training in painting, drawing, and printmaking alongside renowned artists and university professors.",
+    "paragraph2": "My work explores the relationship between color, texture, and emotion, in a process where matter becomes language. Through abstract expressionism, I seek to create a dialogue with the viewer, inviting them to freely interpret each piece."
+  },
+    "ambient": {
+      "title": "Art & Space",
+      "subtitle": "Creative connections with architecture and interior design studios to create unique environments where art interacts with its surroundings."
+    }
 }

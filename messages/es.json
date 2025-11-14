@@ -48,5 +48,83 @@
       "title": "Art & Deco — Palermo",
       "description": "Muestra individual (2023). Obras presentadas en Art & Deco, un espacio de diseño y arte en Palermo Soho."
     }
-  }
+  },
+    "Contact": {
+    "profileAlt": "Foto de contacto",
+    "contactInfo": "Información de contacto",
+    "contactMe": "Contáctame",
+    "contactDescription": "Si querés hacer una consulta o solicitar un trabajo, completá el formulario y te responderemos lo antes posible.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sendMessage": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "✅ ¡Mensaje enviado correctamente!"
+  },
+    "Ceramics": {
+    "title": "Obra Cerámica",
+    "subtitle": "Piezas únicas artesanales."
+  },
+    "Gallery": {
+    "title": "Obras",
+    "subtitle": "Un recorrido visual a través de mis etapas creativas."
+  },
+    "Projects": {
+    "collabsTitle": "Colaboraciones y proyectos institucionales",
+    "collabsText": "He trabajado junto a diversas instituciones, galerías y espacios privados...",
+    "featuredCollab": "Colaboración destacada",
+    "featuredText": "En 2023, fui convocada por la firma Century 21...",
+    "feature1": "Diseño de obras adaptadas a la arquitectura del espacio.",
+    "feature2": "Colaboración con equipos de diseño y comunicación de marca.",
+    "feature3": "Integración de arte contemporáneo en entornos corporativos.",
+    "featuredQuote": "“Cada obra se concibió como un puente entre la emoción del arte y la narrativa visual corporativa.”",
+    "inviteTitle": "Descubrí mis ambientaciones más destacadas",
+    "inviteText": "Explorá cómo las obras transforman cada espacio...",
+    "inviteButton": "Ver ambientaciones"
+  },
+    "About": {
+      "Ceramic": {
+        "title": "Cerámica",
+        "p1": "Junto a la pintura y la abstracción, exploro la cerámica como un territorio de transformación, donde la tierra, el fuego y el tacto convergen.",
+        "p2": "Cada pieza porta su propia voz, su propio pulso, integrándose al lenguaje más amplio de mi obra. En la arcilla encuentro tanto la permanencia como la fragilidad, la belleza de lo que perdura y la poesía de lo que se quiebra.",
+        "button": "Ver más",
+        "alt1": "Proceso de cerámica",
+        "alt2": "Producto terminado"
+    },
+      "Gallery": {
+        "title": "Explorá mi universo pictórico",
+        "p": "Cada obra es una invitación a detenerse, observar y dejarse llevar por el color, la materia y la emoción. Entrá a la galería y descubrí las pinturas originales que dieron vida a cada proyecto.",
+        "button": "Ver galería de obras",
+        "alt": "Ver galería de obras"
+    },
+      "collab": {
+        "title": "Obras colaborativas",
+        "description": "He colaborado con instituciones y empresas como Fundación Avon, Century 21 y Vonharv, tejiendo el arte en espacios de diálogo y transformación. A través de talleres y seminarios, invito a otros a despertar la creatividad, a redescubrir el lenguaje de la intuición y el silencioso coraje de la expresión.",
+        "button": "Ver proyectos",
+        "imageAlt": "Taller"
+    },
+      "workshop": {
+        "title": "Taller y Proceso Creativo",
+        "p1": "En mi taller ubicado en City Bell, trabajo rodeada de materiales diversos, papeles, telas y pigmentos. Mi proceso comienza con la observación del entorno y continúa con la experimentación constante. Cada obra surge del diálogo entre la intuición y la técnica, donde la materia cobra vida propia.",
+        "p2": "A partir del reciclado y la reutilización, transformo objetos y soportes en obras cargadas de energía visual. Las transparencias, superposiciones y relieves son una constante en mi búsqueda estética.",
+        "imageAlt": "Taller y proceso"
+    },
+      "cv": {
+        "title": "Currículum Vitae",
+        "description": "Descargá mi currículum y conocé mi formación, exposiciones y proyectos artísticos. Es un resumen de mi recorrido y mi pasión por el arte.",
+        "button": "Descargar CV",
+        "downloadEs": "Descargar en Español (es)",
+        "downloadEn": "Descargar en Inglés (en)"
+    },
+    "portraitAlt": "Retrato",
+    "subtitle": "Artista plástica y diseñadora visual",
+    "title": "Sobre mí",
+    "paragraph1": "Nací en La Plata, Argentina, y me especializo en arte abstracto. Me gradué como Diseñadora en Comunicación Visual en la Facultad de Bellas Artes de la Universidad Nacional de La Plata. También realicé estudios secundarios en Alemania, donde comenzó mi vínculo con el arte. Desde 1998 continúo mi formación en pintura, dibujo y grabado junto a reconocidos artistas y docentes universitarios.",
+    "paragraph2": "Mi trabajo explora la relación entre color, textura y emoción, en un proceso donde la materia se convierte en lenguaje. A través del expresionismo abstracto, busco generar diálogo con el espectador, invitándolo a interpretar libremente cada obra."
+  },
+    "ambient": {
+      "title": "Arte y Espacio",
+      "subtitle": "Vínculos creativos con estudios de arquitectura y diseño interior para generar ambientaciones únicas donde el arte dialoga con el entorno."
+    }
 }

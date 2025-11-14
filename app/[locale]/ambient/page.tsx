@@ -3,15 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import { GalleryImage } from "@/types";
+import { useTranslations } from "next-intl";
 
 export default function Ambient() {
-  // Estado para manejar la imagen seleccionada en el modal
+
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-
-  // Estado para manejar la carga de la imagen en el modal
   const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
+  const t = useTranslations("ambient");
 
-  // Lista de imágenes
   const images: GalleryImage[] = [
     { src: "/image/ambientaciones/amb2.jpg", alt: "ambientacion" },
     { src: "/image/ambientaciones/amb1.jpg", alt: "ambientacion" },
@@ -66,15 +65,15 @@ export default function Ambient() {
   return (
     <section className="container py-16">
       {/* TÍTULO */}
-      <header className="text-center mb-12 px-4">
-        <h1 className="text-4xl font-semibold mb-2 text-gray-900">
-          Arte y Espacio
-        </h1>
-        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Vinculos creativos con estudios de arquitectura y diseño interior
-          para generar ambientaciones únicas donde el arte dialoga con el entorno.
-        </p>
-      </header>
+    <header className="text-center mb-12 px-4">
+      <h1 className="text-4xl font-semibold mb-2 text-gray-900">
+        {t("title")}
+      </h1>
+
+      <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
+        {t("subtitle")}
+      </p>
+    </header>
 
       {/* GRID DE IMÁGENES */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
