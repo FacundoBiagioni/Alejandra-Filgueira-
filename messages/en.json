@@ -27,7 +27,6 @@
   },
     "CarruselExpos": {
     "title": "Exhibitions and Appearances",
-    "paragraph1": "Throughout my career, I have had the opportunity to showcase my work in various exhibitions and art fairs, sharing spaces with other artists and connecting with diverse audiences.",
     "paragraph2": "This selection gathers other notable exhibitions, complementing the institutional collaborations and individual projects I have already presented. Each showcase reflects important moments of my career and artistic evolution.",
     "expoAlt": "Exhibition"
   },
@@ -67,21 +66,23 @@
     "subtitle": "Unique handcrafted pieces."
   },
     "Gallery": {
-    "title": "Artworks",
+    "title": "Paintings",
     "subtitle": "A visual journey through my creative stages."
   },
     "Projects": {
-    "collabsTitle": "Institutional collaborations and projects",
-    "collabsText": "I have worked with various institutions, galleries and private spaces...",
+    "collabsTitle": "Exhibitions",
+    "collabsText": "He participated in exhibitions together with various institutions, galleries and private spaces, taking my work to corporate and cultural environments where art completes an integrative and express role.",
     "featuredCollab": "Featured collaboration",
-    "featuredText": "In 2023, I was invited by Century 21 to develop exclusive pieces...",
+    "featuredText": "In 2023, I was summoned by the Century 21 firm to develop exclusive pieces for its corporate spaces and showcases. This project combined the brand's visual identity with my artistic aesthetic, exploring texture, color and movement in unique compositions that reflect professionalism and creativity.",
     "feature1": "Design of artworks adapted to the architecture of the space.",
     "feature2": "Collaboration with brand design and communication teams.",
     "feature3": "Integration of contemporary art into corporate environments.",
     "featuredQuote": "\"Each piece was conceived as a bridge between artistic emotion and corporate visual narrative.\"",
     "inviteTitle": "Discover my most outstanding room settings",
-    "inviteText": "Explore how the artworks transform each space...",
-    "inviteButton": "See room settings"
+    "inviteText": "Explore how the works transform each space, integrating harmoniously with the architecture, light and style of each environment.",
+    "inviteButton": "See room settings",
+        "pressTitle": "Press & Appearances",
+    "pressDescription": "A selection of interviews, events, and media publications where the work connects with new audiences, creating dialogues between art and contemporary culture. Some highlighted appearances include features in Infobae and collaborations with Espacio y Confort."
   },
     "About": {
       "Ceramic": {
@@ -105,10 +106,10 @@
         "imageAlt": "Workshop"
     },
       "workshop": {
-        "title": "Workshop and Creative Process",
-        "p1": "In my studio located in City Bell, I work surrounded by diverse materials—papers, fabrics, and pigments. My process begins with observing the environment and continues through constant experimentation. Each piece emerges from the dialogue between intuition and technique, where matter gains a life of its own.",
-        "p2": "Through recycling and reusing materials, I transform objects and supports into works filled with visual energy. Transparency, layering, and texture are constant elements in my aesthetic research.",
-        "imageAlt": "Workshop and creative process"
+        "title": "Matter and Process",
+        "p1": "From my studio in City Bell, I move between materials like someone who moves between memories, allowing each one to find their own shape and rhythm. Creation, for me, is a process that unfolds between composition and chance, between control and delivery.",
+        "p2": "Recycling becomes not only an aesthetic gesture but a poetic act, fragments of the past that are reborn, matter that once again remembers its purpose.",
+        "imageAlt": "Matter and Process"
     },
       "cv": {
         "title": "Curriculum Vitae",
