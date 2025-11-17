@@ -192,6 +192,53 @@ export default function Empresas() {
         </div>
       </section>
 
+      {/* WORKSHOP & EVENTOS */}
+<section className="container px-6 sm:px-10 md:px-16 lg:px-20 py-20 border-t border-gray-200">
+
+  <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+    {/* IMAGEN GRANDE */}
+    <div className="relative w-full h-[550px] rounded-xl overflow-hidden">
+      <Image
+        src="/image/artes para empresas/empresa12.jpeg"
+        alt="Workshop empresarial"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+    {/* TEXTOS */}
+    <div className="space-y-10 max-w-xl">
+      
+      {/* WORKSHOP */}
+      <div className="space-y-4">
+        <h3 className="font-titulo text-3xl font-semibold text-gray-900">
+          {t("workshopTitle")}
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          {t("workshopDescription")}
+        </p>
+      </div>
+
+      {/* ARTE EN EVENTOS */}
+      <div className="space-y-4">
+        <h3 className="font-titulo text-3xl font-semibold text-gray-900">
+          {t("eventsArtTitle")}
+        </h3>
+
+        <p className="text-gray-700 leading-relaxed">
+          {t("eventsArtDescription")}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+        
+      
       {/* CARRUSEL FINAL */}
       <section>
         <CarruselExpos />

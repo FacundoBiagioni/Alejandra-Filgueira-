@@ -81,8 +81,12 @@
     "inviteTitle": "Discover my most outstanding room settings",
     "inviteText": "Explore how the works transform each space, integrating harmoniously with the architecture, light and style of each environment.",
     "inviteButton": "See room settings",
-        "pressTitle": "Press & Appearances",
-    "pressDescription": "A selection of interviews, events, and media publications where the work connects with new audiences, creating dialogues between art and contemporary culture. Some highlighted appearances include features in Infobae and collaborations with Espacio y Confort."
+    "pressTitle": "Press & Appearances",
+    "pressDescription": "A selection of interviews, events, and media publications where the work connects with new audiences, creating dialogues between art and contemporary culture. Some highlighted appearances include features in Infobae and collaborations with Espacio y Confort.",
+    "workshopTitle": "Group Art Workshop",
+    "workshopDescription": "In a corporate environment that values innovation and creative thinking, this experience invites teams to participate in a unique abstract art session designed specifically for workplace groups. The workshop aims to stimulate or unlock individual creativity, fostering new dynamics of interaction and strengthening interpersonal relationships within a playful, reflective, and professional context.",
+    "eventsArtTitle": "Art at Events",
+    "eventsArtDescription": "Live art experiences that can include participatory activities where the audience engages with guided artistic exploration. No prior experience is required—only the willingness to explore new creative possibilities. ALL MATERIALS INCLUDED."
   },
     "About": {
       "Ceramic": {

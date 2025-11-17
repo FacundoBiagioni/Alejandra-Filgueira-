@@ -81,8 +81,12 @@
     "inviteTitle": "Descubrí mis ambientaciones más destacadas",
     "inviteText": "Explorá cómo las obras transforman cada espacio, integrándose armónicamente con la arquitectura, la luz y el estilo de cada ambiente.",
     "inviteButton": "Ver ambientaciones",
-      "pressTitle": "Prensa y Apariciones",
-  "pressDescription": "Selección de entrevistas, eventos y publicaciones en medios donde la obra se conecta con nuevos públicos, generando diálogos entre el arte y la cultura contemporánea. Algunas apariciones destacadas incluyen notas en Infobae y colaboraciones con Espacio y Confort."
+    "pressTitle": "Prensa y Apariciones",
+    "pressDescription": "Selección de entrevistas, eventos y publicaciones en medios donde la obra se conecta con nuevos públicos, generando diálogos entre el arte y la cultura contemporánea. Algunas apariciones destacadas incluyen notas en Infobae y colaboraciones con Espacio y Confort.",
+    "workshopTitle": "Workshop de Arte grupales",
+    "workshopDescription": "En un entorno empresarial que valora la innovación y el pensamiento creativo, se propone participar en una experiencia distinta: una jornada de arte abstracto diseñada específicamente para equipos de trabajo. Esta actividad tiene como objetivo estimular o destrabar la creatividad individual, generando nuevas dinámicas de interacción y fortaleciendo los vínculos interpersonales dentro de un marco lúdico, reflexivo y profesional.",
+    "eventsArtTitle": "Arte en Eventos",
+    "eventsArtDescription": "Experiencias en vivo, que pueden ser participativas, donde el público experimenta el arte con guía profesional. En ambos casos no se requiere experiencia previa, solo la disposición a explorar nuevas posibilidades. INCLUYE MATERIALES."
   },
     "About": {
       "Ceramic": {
