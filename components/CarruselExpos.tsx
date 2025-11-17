@@ -19,7 +19,6 @@ export default function CarruselExpos() {
           </h1>
         </div>
         <div className="text-gray-600 leading-relaxed space-y-4 text-justify sm:text-left">
-          <p>{t("paragraph1")}</p>
           <p>{t("paragraph2")}</p>
         </div>
       </div>
@@ -38,8 +37,8 @@ export default function CarruselExpos() {
           }}
         >
           {[
-            "expo12.jpeg","expo2.jpeg","expo10.jpeg","expo11.jpeg","expo6.jpeg",
-            "expo14.jpeg","expo15.jpeg","expo16.jpeg","expo18.jpeg","expo19.jpeg",
+            "expo12.jpeg","expo10.jpeg","expo11.jpeg","expo6.jpeg",
+            "expo14.jpeg","expo15.jpeg","expo18.jpeg","expo19.jpeg",
             "expo20.jpeg","expo21.jpeg","expo35.jpeg","expo36.jpeg","expo38.jpeg",
             "expo42.jpeg","expo43.jpeg","expo44.jpeg","expo52.jpeg",
           ].map((img, index) => (

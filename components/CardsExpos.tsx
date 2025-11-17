@@ -63,7 +63,7 @@ export default function CardsExpos() {
           return (
             <div
               key={item.id}
-              className="relative overflow-hidden group rounded-lg shadow-md cursor-pointer"
+              className="relative overflow-hidden group rounded-lg cursor-pointer"
               onClick={() => isTouch && handleCardClick(item.id)}
             >
               <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] bg-gray-100 flex items-center justify-center">
@@ -72,7 +72,7 @@ export default function CardsExpos() {
                   width={380}
                   height={450}
                   alt={item.title}
-                  className="object-fill w-full h-full"
+                  className="object-contain w-full h-full bg-white"
                 />
                 <div
                   className={`absolute inset-0 bg-gray-500 bg-opacity-80 transition-opacity duration-500 
