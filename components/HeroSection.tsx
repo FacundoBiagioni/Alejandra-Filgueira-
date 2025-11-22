@@ -2,10 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { TbArrowUpRight } from "react-icons/tb";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 
 export default function HeroSection() {
   const t = useTranslations("HeroSection");
+  const pathname = usePathname();
+
+// 🌐 Detectamos idioma actual igual que en Navigation/Header
+const currentLocale =
+  pathname?.split("/")[1] || Cookies.get("locale") || "es";
 
   return (
     <div className="bg-opacity-60 bg-zinc-100 overflow-hidden relative">
@@ -20,7 +27,7 @@ export default function HeroSection() {
           </p>
 
           {/* ✅ Botón con Link a /contacto */}
-          <Link href="/contact">
+          <Link href={`/${currentLocale}/contact`}>
             <button className="font-titulo inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg transition-all bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
               {t("button")} <TbArrowUpRight className="w-5 h-5 ml-2" />
             </button>

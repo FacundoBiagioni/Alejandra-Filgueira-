@@ -7,10 +7,17 @@ import Link from "next/link";
 import { useState } from "react";
 import { TbArrowUpRight } from "react-icons/tb";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("About");
+  const pathname = usePathname();
+
+// 🌐 Detectamos idioma actual igual que en Navigation/Header
+const currentLocale =
+  pathname?.split("/")[1] || Cookies.get("locale") || "es";
 
   return (
     <div className="bg-white text-gray-800">
@@ -161,13 +168,14 @@ export default function About() {
         {t("collab.description")}
       </p>
 
-      <Link
-        href="/projects"
-        className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
-      >
-        {t("collab.button")}
-        <TbArrowUpRight className="w-5 h-5" />
-      </Link>
+  <Link
+    href={`/${currentLocale}/projects`} // 🔵 Mantiene idioma actual
+    className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
+    prefetch
+  >
+    {t("collab.button")}
+    <TbArrowUpRight className="w-5 h-5" />
+  </Link>
     </div>
 
     <div className="w-full lg:w-1/4 overflow-hidden rounded-lg shadow-md">
@@ -220,7 +228,7 @@ export default function About() {
       <p>{t("Ceramic.p2")}</p>
 
       <Link
-        href="/ceramic"
+        href={`/${currentLocale}/ceramic`}
         className="font-titulo inline-flex items-center gap-2 px-6 py-3 text-sm text-white rounded-full shadow-lg bg-gray-950 hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 transition"
       >
         {t("Ceramic.button")}
@@ -259,7 +267,7 @@ export default function About() {
   </p>
 
   <Link
-    href="/gallery"
+    href={`/${currentLocale}/gallery`}
     className="group relative inline-block rounded-xl overflow-hidden shadow-xl border hover:scale-105 transform transition duration-500"
   >
     <Image

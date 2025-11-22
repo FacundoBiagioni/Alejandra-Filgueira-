@@ -1,21 +1,21 @@
 {
   "Navigation": {
-    "bio": "Bio",
-    "projects": "Collaborations",
-    "ambient": "Art & Spaces",
-    "gallery": "Gallery",
-    "ceramic": "Ceramics",
-    "contact": "Contact",
-    "openMenu": "Open menu"
+    "bio": "BIO",
+    "projects": "COLLABORATIONS",
+    "ambient": "ART & SPACES",
+    "gallery": "GALLERY",
+    "ceramic": "CERAMICS",
+    "contact": "CONTACT",
+    "openMenu": "OPEN MENU"
   },
     "InstagramGrid": {
     "title": "Discover more about my artistic world",
-    "description": "In this space, I share my professional and personal journey, the processes behind each artwork, and moments that inspire my art. You can discover more and connect with me through Instagram.",
+    "description": "In this space, I share my professional and personal journey, the processes behind each artwork, and the moments that inspire my practice. You can explore further and connect with me on Instagram.",
     "profileName": "@Alejandra Filgueira",
     "profileDescription": "Follow her art, processes, and posts on Instagram."
   },
     "HeroSection": {
-    "title": "Companies & Collaborations",
+    "title": "Companies & collaborations",
     "description": "Projects I carried out for institutions, brands, and companies. Commissioned works, interventions, and collaborations that reflect my professional experience with various organizations and brands.",
     "button": "Contact for project"
   },
@@ -26,8 +26,8 @@
     "connect": "Let's connect"
   },
     "CarruselExpos": {
-    "title": "Exhibitions and Appearances",
-    "paragraph2": "This selection gathers other notable exhibitions, complementing the institutional collaborations and individual projects I have already presented. Each showcase reflects important moments of my career and artistic evolution.",
+    "title": "Artistic showcases",
+    "paragraph2": "This selection gathers other notable exhibitions, complementing the institutional collaborations and individual projects",
     "expoAlt": "Exhibition"
   },
     "CardsExpos": {
@@ -62,16 +62,16 @@
     "success": "✅ Message sent successfully!"
   },
     "Ceramics": {
-    "title": "Ceramic Art",
+    "title": "Ceramic art",
     "subtitle": "Unique handcrafted pieces."
   },
     "Gallery": {
     "title": "Paintings",
-    "subtitle": "A visual journey through my creative stages."
+    "subtitle": "A visual journey through my pictorial works."
   },
     "Projects": {
     "collabsTitle": "Exhibitions",
-    "collabsText": "He participated in exhibitions together with various institutions, galleries and private spaces, taking my work to corporate and cultural environments where art completes an integrative and express role.",
+    "collabsText": "I have participated in exhibitions in collaboration with institutions, galleries, and private spaces, bringing my work into corporate and cultural environments where art fulfills an integrative and expressive role.",
     "featuredCollab": "Featured collaboration",
     "featuredText": "In 2023, I was summoned by the Century 21 firm to develop exclusive pieces for its corporate spaces and showcases. This project combined the brand's visual identity with my artistic aesthetic, exploring texture, color and movement in unique compositions that reflect professionalism and creativity.",
     "feature1": "Design of artworks adapted to the architecture of the space.",
@@ -81,46 +81,46 @@
     "inviteTitle": "Discover my most outstanding room settings",
     "inviteText": "Explore how the works transform each space, integrating harmoniously with the architecture, light and style of each environment.",
     "inviteButton": "See room settings",
-    "pressTitle": "Press & Appearances",
-    "pressDescription": "A selection of interviews, events, and media publications where the work connects with new audiences, creating dialogues between art and contemporary culture. Some highlighted appearances include features in Infobae and collaborations with Espacio y Confort.",
-    "workshopTitle": "Group Art Workshop",
-    "workshopDescription": "In a corporate environment that values innovation and creative thinking, this experience invites teams to participate in a unique abstract art session designed specifically for workplace groups. The workshop aims to stimulate or unlock individual creativity, fostering new dynamics of interaction and strengthening interpersonal relationships within a playful, reflective, and professional context.",
-    "eventsArtTitle": "Art at Events",
-    "eventsArtDescription": "Live art experiences that can include participatory activities where the audience engages with guided artistic exploration. No prior experience is required—only the willingness to explore new creative possibilities. ALL MATERIALS INCLUDED."
+    "pressTitle": "Media & interviews",
+    "pressDescription": "A curated selection of interviews, events, and media features that showcase how my work engages whith broader cultural conversations. Highlighted include coverage in Infobae and collaborations with Espacio & Confort.",
+    "workshopTitle": "Art workshops for groups",
+    "workshopDescription": "In a corporate environment that values innovation and creative thinking, this experience invites teams to engage in a unique abstract art session designed specifically for workplace groups. The workshop seeks to stimulate or unlock individual creativity, fostering new dynamics of interaction and strengthening interpersonal relationships within a playful, reflective, and professional setting.",
+    "eventsArtTitle": "Art at events",
+    "eventsArtDescription": "Live art experiences that invite participants to engage in guided creative exploration. No prior experience is required—only the willingness to discover new creative possibilities. all materials are included."
   },
     "About": {
       "Ceramic": {
         "title": "Ceramics",
-        "p1": "Alongside painting and abstraction, I explore ceramics as a territory of transformation, where earth, fire, and touch converge.",
-        "p2": "Each piece carries its own voice and pulse, integrating into the broader language of my work. In clay I find both permanence and fragility — the beauty of what endures and the poetry of what breaks.",
+        "p1": "Alongside painting and abstraction, I explore ceramics as a space of transformation, where earth, fire, and touch converge.",
+        "p2": "Each piece carries its own rhythm and presence, weaving itself into the broader language of my work. In clay, I find both permanence and fragility — the beauty of what endures and the quiet poetry of what may breaks.",
         "button": "See more",
         "alt1": "Ceramics process",
         "alt2": "Finished piece"
     },
       "Gallery": {
         "title": "Explore my pictorial universe",
-        "p": "Each artwork is an invitation to pause, observe, and be carried away by color, material, and emotion. Enter the gallery and discover the original paintings behind each project.",
+        "p": "Each artwork invites you to pause, observe, and let yourself be carried by color, material, and emotion. Step into the gallery and discover the original paintings that bring each project to life.",
         "button": "See artwork gallery",
         "alt": "See artwork gallery"
     },
       "collab": {
-        "title": "Collaborative Works",
-        "description": "I have collaborated with institutions and companies such as Fundación Avon, Century 21, and Vonharv, weaving art into spaces of dialogue and transformation. Through workshops and seminars, I invite others to awaken creativity, rediscover the language of intuition, and embrace the quiet courage of expression.",
+        "title": "Collaborative works",
+        "description": "I have collaborated with institutions and companies such as the Avon Foundation, Century 21 and Vonharv, weaving art in spaces of dialogue and transformation. Through workshops and seminars, I invite you to awaken creativity, to rediscover the language of intuition and the silent courage of expression.",
         "button": "View projects",
         "imageAlt": "Workshop"
     },
       "workshop": {
-        "title": "Matter and Process",
-        "p1": "From my studio in City Bell, I move between materials like someone who moves between memories, allowing each one to find their own shape and rhythm. Creation, for me, is a process that unfolds between composition and chance, between control and delivery.",
-        "p2": "Recycling becomes not only an aesthetic gesture but a poetic act, fragments of the past that are reborn, matter that once again remembers its purpose.",
-        "imageAlt": "Matter and Process"
+        "title": "Matter and process",
+        "p1": "From my studio in City Bell, I move between materials as one moves between memories, allowing each to find its own form and rhythm. Creation, for me, is a process that unfolds between composition and chance, between control and surrender.",
+        "p2": "Recycling becomes not only an aesthetic choice but a poetic act, fragments of the past reborn, matter that remembers its purpose once again.",
+        "imageAlt": "Matter and process"
     },
       "cv": {
-        "title": "Curriculum Vitae",
+        "title": "Curriculum vitae",
         "description": "Download my CV to learn about my training, exhibitions, and artistic projects. It is a summary of my journey and passion for art.",
         "button": "Download CV",
-        "downloadEs": "Download in Spanish (es)",
-        "downloadEn": "Download in English (en)"
+        "downloadEs": "Download in spanish (es)",
+        "downloadEn": "Download in english (en)"
     },
     "portraitAlt": "Portrait",
     "subtitle": "Visual artist and designer",
@@ -129,7 +129,7 @@
     "paragraph2": "My work explores the relationship between color, texture, and emotion, in a process where matter becomes language. Through abstract expressionism, I seek to create a dialogue with the viewer, inviting them to freely interpret each piece."
   },
     "ambient": {
-      "title": "Art & Space",
-      "subtitle": "Creative connections with architecture and interior design studios to create unique environments where art interacts with its surroundings."
+      "title": "Art whithin spaces",
+      "subtitle": "Explore how each artwork transforms a space, integrating seamlessly with its architecture, light, and overall aesthetic."
     }
 }
