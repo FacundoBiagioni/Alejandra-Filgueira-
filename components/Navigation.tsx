@@ -6,13 +6,23 @@ import { useState, useEffect, useRef } from "react";
 import { Menu } from "lucide-react";
 import Cookies from "js-cookie";
 import { NavLink } from "@/types";
-import { useTranslations } from "next-intl"; // ✅ Hook para traducciones
+import { useTranslations } from "next-intl";
 
 export default function Navigation() {
-  const t = useTranslations("Navigation"); // ✅ Namespace: "Navigation"
+  const t = useTranslations("Navigation");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLElement | null>(null);
+
+  // 👉 Inyección directa de la fuente SOLO para este componente
+  const fontCSS = `
+    @font-face {
+      font-family: "Typold";
+      src: url("/fonts/Typold Book.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+  `;
 
   // 🔹 Lista de enlaces principales traducidos
   const nav: NavLink[] = [
@@ -24,21 +34,17 @@ export default function Navigation() {
     { href: "/contact", label: t("contact") },
   ];
 
-  // 🔸 Detecta idioma actual
   const currentLocale =
     pathname?.split("/")[1] || Cookies.get("locale") || "es";
 
-  // 🔸 Construye la URL equivalente en otro idioma
   const getToggledLanguageHref = () => {
     const newLocale = currentLocale === "es" ? "en" : "es";
     Cookies.set("locale", newLocale, { expires: 365 });
     return pathname.replace(`/${currentLocale}`, `/${newLocale}`);
   };
 
-  // 🔸 Genera rutas con el idioma activo
   const localizeHref = (href: string) => `/${currentLocale}${href}`;
 
-  // 🔸 Bloquea scroll y cierra menú al hacer click fuera
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
@@ -60,10 +66,15 @@ export default function Navigation() {
 
   return (
     <>
-      {/* ▫️ NAV DESKTOP */}
-      <div className="relative w-full flex items-center justify-center">
-        {/* 🔹 Enlaces principales */}
-        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-x-8 xl:gap-x-10 whitespace-nowrap transition-all duration-300">
+      {/* 🔥 Carga la fuente SOLO aquí */}
+      <style jsx global>{fontCSS}</style>
+
+      {/* ▫️ NAV DESKTOP (ahora solo visible desde 1280px → xl) */}
+      <div
+        className="relative w-full flex items-center justify-center"
+        style={{ fontFamily: "Typold" }}
+      >
+        <nav className="hidden xl:flex absolute left-1/2 -translate-x-1/2 items-center gap-x-8 xl:gap-x-10 whitespace-nowrap transition-all duration-300">
           {nav.map(({ href, label }) => {
             const fullHref = localizeHref(href);
             const isActive = pathname === fullHref;
@@ -71,7 +82,7 @@ export default function Navigation() {
               <Link
                 key={href}
                 href={fullHref}
-                className={`font-titulo tracking-wide text-[0.95rem] md:text-base lg:text-[1rem] transition-all duration-200 ${
+                className={`tracking-wide text-[0.95rem] md:text-base lg:text-[1rem] transition-all duration-200 ${
                   isActive
                     ? "font-semibold text-black"
                     : "text-gray-700 hover:text-black"
@@ -84,8 +95,8 @@ export default function Navigation() {
           })}
         </nav>
 
-        {/* 🔵 Botón de idioma */}
-        <div className="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2">
+        {/* 🔵 Botón de idioma DESKTOP */}
+        <div className="hidden xl:flex absolute right-6 top-1/2 -translate-y-1/2">
           <Link
             href={getToggledLanguageHref()}
             onClick={() =>
@@ -101,12 +112,13 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* ▫️ BOTÓN HAMBURGUESA */}
+      {/* ▫️ BOTÓN HAMBURGUESA (visible hasta 1279px → xl:hidden) */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
           aria-label={t("openMenu")}
-          className="relative z-[80] flex items-center justify-center w-8 h-8 lg:hidden text-gray-800"
+          className="relative z-[80] flex items-center justify-center w-8 h-8 xl:hidden text-gray-800"
+          style={{ fontFamily: "Typold" }}
         >
           <Menu size={28} />
         </button>
@@ -122,10 +134,11 @@ export default function Navigation() {
         }`}
       />
 
-      {/* ▫️ PANEL MOBILE */}
+      {/* ▫️ PANEL MOBILE (visible hasta xl) */}
       <nav
         ref={panelRef}
-        className={`fixed top-0 left-0 right-0 z-[75] flex flex-col items-center justify-center gap-6 bg-white py-20 shadow-lg transform transition-transform duration-300 lg:hidden ${
+        style={{ fontFamily: "Typold" }}
+        className={`fixed top-0 left-0 right-0 z-[75] flex flex-col items-center justify-center gap-6 bg-white py-20 shadow-lg transform transition-transform duration-300 xl:hidden ${
           open ? "translate-y-0" : "-translate-y-full"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -138,7 +151,7 @@ export default function Navigation() {
               key={href}
               href={fullHref}
               onClick={() => setOpen(false)}
-              className={`text-lg font-titulo transition ${
+              className={`text-lg transition ${
                 isActive
                   ? "font-semibold text-black"
                   : "text-gray-700 hover:text-black"
@@ -150,7 +163,7 @@ export default function Navigation() {
           );
         })}
 
-        {/* 🔵 Botón idioma mobile */}
+        {/* 🔵 Botón idioma MOBILE */}
         <Link
           href={getToggledLanguageHref()}
           onClick={() => {

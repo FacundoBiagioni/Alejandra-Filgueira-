@@ -6,18 +6,27 @@ import logo from "../public/logo.png";
 import Navigation from "./Navigation";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 export default function Header() {
   const pathname = usePathname();
-  const [showLogo, setShowLogo] = useState(pathname !== "/");
+
+  // 🔵 Detectamos el idioma actual igual que en Navigation
+  const currentLocale =
+    pathname?.split("/")[1] || Cookies.get("locale") || "es";
+
+  // 🔵 Home localizado (ejemplo: /es o /en)
+  const localizedHomeHref = `/${currentLocale}`;
+
+  const [showLogo, setShowLogo] = useState(pathname !== localizedHomeHref);
 
   useEffect(() => {
-    // 🔹 Reiniciar el estado cada vez que cambie la ruta
-    if (pathname === "/") {
-      setShowLogo(false); // ocultar al entrar al home
+    // 🔹 Reiniciar visibilidad del logo cuando cambia la ruta
+    if (pathname === localizedHomeHref) {
+      setShowLogo(false);
     } else {
-      setShowLogo(true); // mostrar en otras páginas
-      return; // no ejecutar el scroll listener si no estamos en home
+      setShowLogo(true);
+      return; // No escuchamos el scroll si no estamos en home
     }
 
     const handleScroll = () => {
@@ -31,17 +40,19 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]); // <-- se vuelve a ejecutar al cambiar de ruta
+  }, [pathname, localizedHomeHref]);
 
   return (
     <div className="sticky inset-x-0 top-0 z-10 bg-opacity-60 bg-zinc-100 backdrop-blur-lg transition-all duration-500">
       <div className="container flex items-center justify-between py-8">
-        {/* Logo clickeable (responsive) */}
+
+        {/* 🔵 LOGO que respeta el idioma */}
         <Link
-          href="/"
+          href={localizedHomeHref}
           className={`flex-shrink-0 transition-opacity duration-700 ease-in-out ${
             showLogo ? "opacity-100" : "opacity-0"
           }`}
+          prefetch
         >
           <Image
             src={logo}

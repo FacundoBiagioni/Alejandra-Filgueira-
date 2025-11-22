@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { FaInstagram, FaLinkedin, FaPhone, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -73,12 +73,12 @@ export default function ContactMeMinimalEnhanced() {
 
         <div className="flex flex-col gap-3 text-gray-700 text-base sm:text-sm md:text-base lg:text-base w-full">
           <div className="flex items-center gap-3">
-            <FaPhone className="text-gray-500" />
-            <span>+54 9 221 524 4292</span>
-          </div>
-          <div className="flex items-center gap-3">
             <FaEnvelope className="text-gray-500" />
             <span>alefilgueira@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <FaWhatsapp className="text-gray-500" />
+            <span>+54 9 221 524 4292</span>
           </div>
           <div className="flex items-center gap-3">
             <FaInstagram className="text-gray-500" />
@@ -90,12 +90,6 @@ export default function ContactMeMinimalEnhanced() {
             <FaLinkedin className="text-gray-500" />
             <a href="https://www.linkedin.com/in/alejandra-filgueira-2a53512b/" target="_blank" className="hover:underline">
               LinkedIn
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <FaExternalLinkAlt className="text-gray-500" />
-            <a href="https://artshale.com.ar/" target="_blank" className="hover:underline">
-              artshale.com.ar
             </a>
           </div>
         </div>

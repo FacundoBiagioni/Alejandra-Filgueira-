@@ -17,7 +17,7 @@ export default function ButtonUp() {
       setIsVisible(scrollY > 700);
 
       // Detectar límite final (últimos 165px)
-      const limit = docHeight - windowHeight - 170;
+      const limit = docHeight - windowHeight - 130;
       if (scrollY >= limit) {
         setBottomOffset(scrollY - limit + 24);
         setIsAtBottomLimit(true);

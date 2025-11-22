@@ -33,6 +33,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Typold";
+  src: url("/fonts/Typold Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 :root {
   --font-title: 'Typold Condensed Medium', sans-serif;

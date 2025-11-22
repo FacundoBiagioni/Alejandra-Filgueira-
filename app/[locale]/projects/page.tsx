@@ -8,9 +8,16 @@ import CatalogueSection from "@/components/CardsExpos";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import CarruselExpos from "@/components/CarruselExpos";
+import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 export default function Empresas() {
   const t = useTranslations("Projects");
+  const pathname = usePathname();
+  
+  // 🌐 Detectamos idioma actual igual que en Navigation/Header
+  const currentLocale =
+    pathname?.split("/")[1] || Cookies.get("locale") || "es";
 
   // 👉 Slides desktop (8 imágenes en pares)
   const slides = [
@@ -256,7 +263,7 @@ export default function Empresas() {
         </p>
 
         <Link
-          href="/ambient"
+          href={`/${currentLocale}/ambient`}
           className="font-titulo inline-flex items-center gap-1 px-6 py-3 text-sm sm:text-base text-white rounded-full shadow-lg bg-gray-950 transition-all hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2"
         >
           {t("inviteButton")}

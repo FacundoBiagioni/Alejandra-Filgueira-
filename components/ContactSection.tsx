@@ -2,9 +2,16 @@
 import { CommonProps } from "@/types";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+import Cookies from "js-cookie";
 
 export default function ContactSection({ className }: CommonProps) {
   const t = useTranslations("ContactSection"); // ✅ Namespace: ContactSection
+  const pathname = usePathname();
+
+// 🌐 Detectamos idioma actual igual que en Navigation/Header
+const currentLocale =
+  pathname?.split("/")[1] || Cookies.get("locale") || "es";
 
   return (
     <section className={`bg-zinc-100 py-12 px-6 sm:px-10 lg:px-20 ${className || ""}`}>
@@ -86,7 +93,7 @@ export default function ContactSection({ className }: CommonProps) {
           {/* ✉️ Mail (nuevo) */}
           <li>
             <Link
-              href="/contact"
+              href={`/${currentLocale}/contact`}
               className="relative bg-white rounded-full w-12 h-12 flex justify-center items-center shadow-md cursor-pointer transition-transform hover:scale-110 group"
             >
               <span className="absolute left-1/2 -translate-x-1/2 -top-10 text-white bg-black text-xs sm:text-sm py-1 px-2 rounded opacity-0 pointer-events-none transition-all group-hover:opacity-100">
