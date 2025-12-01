@@ -252,12 +252,12 @@ export default function Empresas() {
         </div>
       </section>
 
-      {/* WORKSHOP & EVENTOS */}
+{/* WORKSHOP & EVENTOS */}
 <section className="container px-6 sm:px-10 md:px-16 lg:px-20 py-20 border-t border-gray-200">
 
-  <div className="grid lg:grid-cols-2 gap-10 items-center">
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
-    {/* IMAGEN GRANDE */}
+    {/* IMAGEN IZQUIERDA */}
     <div className="relative w-full h-[550px] rounded-xl overflow-hidden">
       <Image
         src="/image/artes para empresas/empresa12.jpeg"
@@ -267,9 +267,9 @@ export default function Empresas() {
       />
     </div>
 
-    {/* TEXTOS */}
-    <div className="space-y-10 max-w-xl">
-      
+    {/* TEXTO CENTRO */}
+    <div className="space-y-10 max-w-xl mx-auto">
+
       {/* WORKSHOP */}
       <div className="space-y-4">
         <h3 className="font-titulo text-3xl font-semibold text-gray-900">
@@ -294,9 +294,22 @@ export default function Empresas() {
 
     </div>
 
+    {/* VIDEO DERECHA */}
+    <div className="relative w-full h-[550px] rounded-xl overflow-hidden">
+      <video
+        src="/videos/video_artworck.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full h-full object-cover"
+      />
+    </div>
+
   </div>
 
 </section>
+
         
       
       {/* CARRUSEL FINAL */}
