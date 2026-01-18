@@ -61,7 +61,7 @@ const currentLocale =
         <div className="lg:flex items-center gap-12">
           <div className="lg:w-1/3 mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-md h-[500px]">
             <Image
-              src="/image/procesos/proceso21.jpeg"
+              src="/image/procesos/proceso37.jpeg"
               alt={t("portraitAlt")}
               width={500}
               height={700}
